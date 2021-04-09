@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C20DF983-0335-42B5-8F8B-922E2CF45F0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bibliotech</RootNamespace>
+    <AssemblyName>Bibliotech</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acceso.Designer.cs">
+      <DependentUpon>Acceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAdmin.Designer.cs">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BD.Designer.cs">
+      <DependentUpon>BD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Conexion.cs" />
+    <Compile Include="BibliotechDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetEditorial.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEditorial.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetLibros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLibros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dataSetPL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataSetPL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prestamos.Designer.cs">
+      <DependentUpon>Prestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solicitud.Designer.cs">
+      <DependentUpon>Solicitud.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Acceso.resx">
+      <DependentUpon>Acceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAdmin.resx">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BD.resx">
+      <DependentUpon>BD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos.resx">
+      <DependentUpon>Prestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Solicitud.resx">
+      <DependentUpon>Solicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BibliotechDataSet.xsc">
+      <DependentUpon>BibliotechDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet.xss">
+      <DependentUpon>BibliotechDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet1.xsc">
+      <DependentUpon>BibliotechDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet1.xss">
+      <DependentUpon>BibliotechDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet2.xsc">
+      <DependentUpon>BibliotechDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet2.xss">
+      <DependentUpon>BibliotechDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet3.xsc">
+      <DependentUpon>BibliotechDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet3.xss">
+      <DependentUpon>BibliotechDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet4.xsc">
+      <DependentUpon>BibliotechDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet4.xss">
+      <DependentUpon>BibliotechDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet5.xsc">
+      <DependentUpon>BibliotechDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet5.xss">
+      <DependentUpon>BibliotechDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet6.xsc">
+      <DependentUpon>BibliotechDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet6.xss">
+      <DependentUpon>BibliotechDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet7.xsc">
+      <DependentUpon>BibliotechDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet7.xss">
+      <DependentUpon>BibliotechDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetEditorial.xsc">
+      <DependentUpon>DataSetEditorial.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetEditorial.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEditorial.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetEditorial.xss">
+      <DependentUpon>DataSetEditorial.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLibros.xsc">
+      <DependentUpon>DataSetLibros.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLibros.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLibros.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetLibros.xss">
+      <DependentUpon>DataSetLibros.xsd</DependentUpon>
+    </None>
+    <None Include="dataSetPL.xsc">
+      <DependentUpon>dataSetPL.xsd</DependentUpon>
+    </None>
+    <None Include="dataSetPL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataSetPL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataSetPL.xss">
+      <DependentUpon>dataSetPL.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
