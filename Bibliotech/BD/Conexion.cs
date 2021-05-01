@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.Configuration;
 
 namespace Bibliotech
 {
     public class Conexion
     {
-        private string con;
+        private string con ;
         public Conexion()
         {
-            this.con = "server=CHUY; database=Bibliotech; Integrated Security=True";
+            this.con = ConfigurationManager.ConnectionStrings["Bibliotech.Properties.Settings.BibliotechConnectionString"].ConnectionString;
+            //"server=CHUY; database=Bibliotech; Integrated Security=True"
         }
         public SqlDataReader ReaderQuery(string sql)
         {
