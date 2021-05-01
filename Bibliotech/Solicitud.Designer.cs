@@ -518,15 +518,6 @@ namespace Bibliotech
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbDias;
         private System.Windows.Forms.Label label4;
-        //private DataSetPLTableAdapters.Prestamos_LibrosTableAdapter prestamos_LibrosTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iSBNDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaCreacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaEntregaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aplicaMultaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn montoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DateTimePicker dateEntrega;
         private dataSetPL dataSetPL;
         private System.Windows.Forms.BindingSource prestamosLibrosBindingSource;

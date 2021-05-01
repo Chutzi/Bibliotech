@@ -14,6 +14,7 @@ namespace Bibliotech
     public partial class Form1 : Form
     {
         private string name, puesto, pass, correo;
+        Conexion conexion = new Conexion(); 
         public Form1(string name, string puesto, string pass, string correo)
         {
             this.name = name;
@@ -28,14 +29,7 @@ namespace Bibliotech
             List<string> Op = new List<string>();
             try
             {
-                SqlConnection conexion = new SqlConnection("server=CHUY ; database=Bibliotech ; integrated security = true");
-                conexion.Open();
-                SqlDataReader myReader = null;
-                string sql = "select * from Usuarios left join rol on rol.Id_Rol = Usuarios.Id_Rol left join Rol_Operacion on Rol_Operacion.Id_Rol = Rol.Id_Rol where Correo = '" + correo + "' AND Usuarios.Contrasena='" + pass + "' and rol.Nombre != 'Cliente'";
-                SqlCommand myCommand = new SqlCommand(sql, conexion);
-
-                //Ejecutar el comando SQL
-                myReader = myCommand.ExecuteReader();
+                SqlDataReader myReader = conexion.ReaderQuery("select * from Usuarios left join rol on rol.Id_Rol = Usuarios.Id_Rol left join Rol_Operacion on Rol_Operacion.Id_Rol = Rol.Id_Rol where Correo = '" + correo + "' AND Usuarios.Contrasena='" + pass + "' and rol.Nombre != 'Cliente'");
                 while (myReader.Read())
                 {
                     Op.Add(myReader[12].ToString());
@@ -43,7 +37,6 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Error al cargar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
@@ -57,7 +50,7 @@ namespace Bibliotech
                         button1.Enabled = true;
                         break;
                     case "2":
-                        button3.Enabled = true;
+                        btConsultas.Enabled = true;
                         break;
                     case "3":
                         button4.Enabled = true;
@@ -87,6 +80,11 @@ namespace Bibliotech
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormHija(new BD());
+        }
+
+        private void btConsultas_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Consulta());
         }
 
         private void button2_Click(object sender, EventArgs e)

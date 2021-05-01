@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSViewEmpleados" targetNamespace="http://tempuri.org/DSViewEmpleados.xsd" xmlns:mstns="http://tempuri.org/DSViewEmpleados.xsd" xmlns="http://tempuri.org/DSViewEmpleados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BibliotechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BibliotechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Bibliotech.Properties.Settings.GlobalReference.Default.BibliotechConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_EmpleadosTableAdapter" GeneratorDataComponentClassName="v_EmpleadosTableAdapter" Name="v_Empleados" UserDataComponentName="v_EmpleadosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BibliotechConnectionString (Settings)" DbObjectName="Bibliotech.dbo.v_Empleados" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_usuario, nombre, correo, calle, colonia, estado, municipio, rol FROM dbo.v_Empleados</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_usuario" DataSetColumn="id_usuario" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="correo" DataSetColumn="correo" />
+              <Mapping SourceColumn="calle" DataSetColumn="calle" />
+              <Mapping SourceColumn="colonia" DataSetColumn="colonia" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+              <Mapping SourceColumn="municipio" DataSetColumn="municipio" />
+              <Mapping SourceColumn="rol" DataSetColumn="rol" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSViewEmpleados" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSViewEmpleados" msprop:Generator_UserDSName="DSViewEmpleados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_Empleados" msprop:Generator_TableClassName="v_EmpleadosDataTable" msprop:Generator_TableVarName="tablev_Empleados" msprop:Generator_TablePropName="v_Empleados" msprop:Generator_RowDeletingName="v_EmpleadosRowDeleting" msprop:Generator_RowChangingName="v_EmpleadosRowChanging" msprop:Generator_RowEvHandlerName="v_EmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="v_EmpleadosRowDeleted" msprop:Generator_UserTableName="v_Empleados" msprop:Generator_RowChangedName="v_EmpleadosRowChanged" msprop:Generator_RowEvArgName="v_EmpleadosRowChangeEvent" msprop:Generator_RowClassName="v_EmpleadosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_usuario" msprop:Generator_ColumnVarNameInTable="columnid_usuario" msprop:Generator_ColumnPropNameInRow="id_usuario" msprop:Generator_ColumnPropNameInTable="id_usuarioColumn" msprop:Generator_UserColumnName="id_usuario" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="correo" msprop:Generator_ColumnVarNameInTable="columncorreo" msprop:Generator_ColumnPropNameInRow="correo" msprop:Generator_ColumnPropNameInTable="correoColumn" msprop:Generator_UserColumnName="correo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calle" msprop:Generator_ColumnVarNameInTable="columncalle" msprop:Generator_ColumnPropNameInRow="calle" msprop:Generator_ColumnPropNameInTable="calleColumn" msprop:Generator_UserColumnName="calle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="colonia" msprop:Generator_ColumnVarNameInTable="columncolonia" msprop:Generator_ColumnPropNameInRow="colonia" msprop:Generator_ColumnPropNameInTable="coloniaColumn" msprop:Generator_UserColumnName="colonia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="municipio" msprop:Generator_ColumnVarNameInTable="columnmunicipio" msprop:Generator_ColumnPropNameInRow="municipio" msprop:Generator_ColumnPropNameInTable="municipioColumn" msprop:Generator_UserColumnName="municipio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rol" msprop:Generator_ColumnVarNameInTable="columnrol" msprop:Generator_ColumnPropNameInRow="rol" msprop:Generator_ColumnPropNameInTable="rolColumn" msprop:Generator_UserColumnName="rol">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:v_Empleados" />
+      <xs:field xpath="mstns:id_usuario" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

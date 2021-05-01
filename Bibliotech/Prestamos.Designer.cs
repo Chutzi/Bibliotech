@@ -40,6 +40,8 @@ namespace Bibliotech
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbIdPresta = new System.Windows.Forms.TextBox();
+            this.prestamosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotechDataSet7 = new Bibliotech.BibliotechDataSet7();
             this.button2 = new System.Windows.Forms.Button();
             this.tbIdCliente = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,14 +50,12 @@ namespace Bibliotech
             this.Id_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prestamosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bibliotechDataSet7 = new Bibliotech.BibliotechDataSet7();
             this.prestamosTableAdapter = new Bibliotech.BibliotechDataSet7TableAdapters.PrestamosTableAdapter();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -193,6 +193,16 @@ namespace Bibliotech
             this.tbIdPresta.Size = new System.Drawing.Size(137, 21);
             this.tbIdPresta.TabIndex = 48;
             // 
+            // prestamosBindingSource1
+            // 
+            this.prestamosBindingSource1.DataMember = "Prestamos";
+            this.prestamosBindingSource1.DataSource = this.bibliotechDataSet7;
+            // 
+            // bibliotechDataSet7
+            // 
+            this.bibliotechDataSet7.DataSetName = "BibliotechDataSet7";
+            this.bibliotechDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DodgerBlue;
@@ -271,16 +281,6 @@ namespace Bibliotech
             this.idClienteDataGridViewTextBoxColumn.HeaderText = "Id_Cliente";
             this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
             // 
-            // prestamosBindingSource1
-            // 
-            this.prestamosBindingSource1.DataMember = "Prestamos";
-            this.prestamosBindingSource1.DataSource = this.bibliotechDataSet7;
-            // 
-            // bibliotechDataSet7
-            // 
-            this.bibliotechDataSet7.DataSetName = "BibliotechDataSet7";
-            this.bibliotechDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // prestamosTableAdapter
             // 
             this.prestamosTableAdapter.ClearBeforeFill = true;
@@ -298,9 +298,9 @@ namespace Bibliotech
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,7 +323,7 @@ namespace Bibliotech
         private System.Windows.Forms.TextBox tbIdPresta;
         private System.Windows.Forms.Button button2;
         //private DataSetPrestaTableAdapters.PrestamosTableAdapter prestamosTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamoDataGridViewTextBoxColumn;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Cliente;
         private BibliotechDataSet7 bibliotechDataSet7;
         private System.Windows.Forms.BindingSource prestamosBindingSource1;

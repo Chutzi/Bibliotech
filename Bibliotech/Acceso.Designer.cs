@@ -29,6 +29,7 @@ namespace Bibliotech
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,12 +38,17 @@ namespace Bibliotech
             this.textBoxUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.bibliotechDataSet8 = new Bibliotech.BibliotechDataSet8();
+            this.municipiosEstadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.municipios_EstadoTableAdapter = new Bibliotech.BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,7 +137,6 @@ namespace Bibliotech
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -139,22 +144,7 @@ namespace Bibliotech
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(442, 450);
             this.panel2.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(195, 275);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Entrar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button2
             // 
@@ -181,6 +171,20 @@ namespace Bibliotech
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // bibliotechDataSet8
+            // 
+            this.bibliotechDataSet8.DataSetName = "BibliotechDataSet8";
+            this.bibliotechDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // municipiosEstadoBindingSource
+            // 
+            this.municipiosEstadoBindingSource.DataMember = "Municipios_Estado";
+            this.municipiosEstadoBindingSource.DataSource = this.bibliotechDataSet8;
+            // 
+            // municipios_EstadoTableAdapter
+            // 
+            this.municipios_EstadoTableAdapter.ClearBeforeFill = true;
+            // 
             // Acceso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +200,8 @@ namespace Bibliotech
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,6 +218,9 @@ namespace Bibliotech
         private System.Windows.Forms.TextBox textBoxUser;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private BibliotechDataSet8 bibliotechDataSet8;
+        private System.Windows.Forms.BindingSource municipiosEstadoBindingSource;
+        private BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter municipios_EstadoTableAdapter;
     }
 }

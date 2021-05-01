@@ -89,6 +89,9 @@ namespace Bibliotech
             this.bCanceluser = new System.Windows.Forms.Button();
             this.bEdituser = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.municipiosEstadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotechDataSet8 = new Bibliotech.BibliotechDataSet8();
             this.tbRol = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -107,6 +110,7 @@ namespace Bibliotech
             this.label9 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbMun = new System.Windows.Forms.TextBox();
+            this.municipios_EstadoTableAdapter = new Bibliotech.BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moduloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet)).BeginInit();
@@ -125,6 +129,8 @@ namespace Bibliotech
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -589,6 +595,7 @@ namespace Bibliotech
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.tbRol);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
@@ -615,6 +622,28 @@ namespace Bibliotech
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Libro";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.municipiosEstadoBindingSource;
+            this.comboBox1.DisplayMember = "Descripcion";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(440, 107);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(137, 23);
+            this.comboBox1.TabIndex = 24;
+            this.comboBox1.ValueMember = "Municipio_id";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // municipiosEstadoBindingSource
+            // 
+            this.municipiosEstadoBindingSource.DataMember = "Municipios_Estado";
+            this.municipiosEstadoBindingSource.DataSource = this.bibliotechDataSet8;
+            // 
+            // bibliotechDataSet8
+            // 
+            this.bibliotechDataSet8.DataSetName = "BibliotechDataSet8";
+            this.bibliotechDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbRol
             // 
@@ -650,6 +679,7 @@ namespace Bibliotech
             // tbEdo
             // 
             this.tbEdo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource1, "Estado_id", true));
+            this.tbEdo.Enabled = false;
             this.tbEdo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEdo.Location = new System.Drawing.Point(440, 138);
             this.tbEdo.Name = "tbEdo";
@@ -766,7 +796,6 @@ namespace Bibliotech
             this.label8.Size = new System.Drawing.Size(66, 14);
             this.label8.TabIndex = 15;
             this.label8.Text = "Id_Estado";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -791,11 +820,17 @@ namespace Bibliotech
             // tbMun
             // 
             this.tbMun.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource1, "Municipio_id", true));
+            this.tbMun.Enabled = false;
             this.tbMun.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMun.Location = new System.Drawing.Point(440, 108);
+            this.tbMun.Location = new System.Drawing.Point(402, 107);
             this.tbMun.Name = "tbMun";
-            this.tbMun.Size = new System.Drawing.Size(137, 21);
+            this.tbMun.Size = new System.Drawing.Size(32, 21);
             this.tbMun.TabIndex = 14;
+            this.tbMun.TextChanged += new System.EventHandler(this.tbMun_TextChanged);
+            // 
+            // municipios_EstadoTableAdapter
+            // 
+            this.municipios_EstadoTableAdapter.ClearBeforeFill = true;
             // 
             // AddAdmin
             // 
@@ -847,6 +882,8 @@ namespace Bibliotech
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -928,11 +965,15 @@ namespace Bibliotech
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbName;
-        private System.Windows.Forms.TextBox tbMun;
         private System.Windows.Forms.TextBox tbRol;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbEdo;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private BibliotechDataSet8 bibliotechDataSet8;
+        private System.Windows.Forms.BindingSource municipiosEstadoBindingSource;
+        private BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter municipios_EstadoTableAdapter;
+        private System.Windows.Forms.TextBox tbMun;
         //private BibliotechDataSet1TableAdapters.OperacionesTableAdapter operacionesTableAdapter;
     }
 }

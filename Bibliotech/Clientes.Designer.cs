@@ -33,10 +33,10 @@ namespace Bibliotech
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bibliotechDataSet5 = new Bibliotech.BibliotechDataSet5();
             this.label10 = new System.Windows.Forms.Label();
             this.tbEdo = new System.Windows.Forms.TextBox();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotechDataSet6 = new Bibliotech.BibliotechDataSet6();
             this.tbUser = new System.Windows.Forms.TextBox();
             this.labelISBN = new System.Windows.Forms.Label();
             this.labelEdicion = new System.Windows.Forms.Label();
@@ -58,10 +58,6 @@ namespace Bibliotech
             this.textBoxSearc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.usuariosTableAdapter = new Bibliotech.BibliotechDataSet5TableAdapters.UsuariosTableAdapter();
-            this.bibliotechDataSet6 = new Bibliotech.BibliotechDataSet6();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter = new Bibliotech.BibliotechDataSet6TableAdapters.ClienteTableAdapter();
             this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,13 +65,23 @@ namespace Bibliotech
             this.coloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.municipioidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotechDataSet5 = new Bibliotech.BibliotechDataSet5();
+            this.usuariosTableAdapter = new Bibliotech.BibliotechDataSet5TableAdapters.UsuariosTableAdapter();
+            this.clienteTableAdapter = new Bibliotech.BibliotechDataSet6TableAdapters.ClienteTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bibliotechDataSet8 = new Bibliotech.BibliotechDataSet8();
+            this.municipiosEstadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.municipios_EstadoTableAdapter = new Bibliotech.BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,6 +105,7 @@ namespace Bibliotech
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.tbEdo);
@@ -134,16 +141,6 @@ namespace Bibliotech
             this.label1.TabIndex = 24;
             this.label1.Text = "Dirección";
             // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataMember = "Usuarios";
-            this.usuariosBindingSource.DataSource = this.bibliotechDataSet5;
-            // 
-            // bibliotechDataSet5
-            // 
-            this.bibliotechDataSet5.DataSetName = "BibliotechDataSet5";
-            this.bibliotechDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -163,6 +160,16 @@ namespace Bibliotech
             this.tbEdo.Name = "tbEdo";
             this.tbEdo.Size = new System.Drawing.Size(137, 21);
             this.tbEdo.TabIndex = 20;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.bibliotechDataSet6;
+            // 
+            // bibliotechDataSet6
+            // 
+            this.bibliotechDataSet6.DataSetName = "BibliotechDataSet6";
+            this.bibliotechDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbUser
             // 
@@ -283,6 +290,7 @@ namespace Bibliotech
             this.tbMun.Name = "tbMun";
             this.tbMun.Size = new System.Drawing.Size(137, 21);
             this.tbMun.TabIndex = 14;
+            this.tbMun.TextChanged += new System.EventHandler(this.tbMun_TextChanged);
             // 
             // bDeleteuser
             // 
@@ -399,25 +407,6 @@ namespace Bibliotech
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(606, 150);
             this.dataGridView5.TabIndex = 44;
-            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
-            // bibliotechDataSet6
-            // 
-            this.bibliotechDataSet6.DataSetName = "BibliotechDataSet6";
-            this.bibliotechDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "Cliente";
-            this.clienteBindingSource.DataSource = this.bibliotechDataSet6;
-            // 
-            // clienteTableAdapter
-            // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
             // 
             // idClienteDataGridViewTextBoxColumn
             // 
@@ -461,6 +450,50 @@ namespace Bibliotech
             this.municipioidDataGridViewTextBoxColumn.HeaderText = "Municipio_id";
             this.municipioidDataGridViewTextBoxColumn.Name = "municipioidDataGridViewTextBoxColumn";
             // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.bibliotechDataSet5;
+            // 
+            // bibliotechDataSet5
+            // 
+            this.bibliotechDataSet5.DataSetName = "BibliotechDataSet5";
+            this.bibliotechDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.municipiosEstadoBindingSource;
+            this.comboBox1.DisplayMember = "Descripcion";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(440, 140);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 25;
+            this.comboBox1.ValueMember = "Municipio_id";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // bibliotechDataSet8
+            // 
+            this.bibliotechDataSet8.DataSetName = "BibliotechDataSet8";
+            this.bibliotechDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // municipiosEstadoBindingSource
+            // 
+            this.municipiosEstadoBindingSource.DataMember = "Municipios_Estado";
+            this.municipiosEstadoBindingSource.DataSource = this.bibliotechDataSet8;
+            // 
+            // municipios_EstadoTableAdapter
+            // 
+            this.municipios_EstadoTableAdapter.ClearBeforeFill = true;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,11 +507,13 @@ namespace Bibliotech
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -524,5 +559,9 @@ namespace Bibliotech
         private System.Windows.Forms.DataGridViewTextBoxColumn coloniaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn municipioidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private BibliotechDataSet8 bibliotechDataSet8;
+        private System.Windows.Forms.BindingSource municipiosEstadoBindingSource;
+        private BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter municipios_EstadoTableAdapter;
     }
 }

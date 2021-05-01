@@ -27,45 +27,28 @@ namespace Bibliotech
             if (Regex.IsMatch(email, expresion))
             {
                 if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
                     return true;
-                }
                 else
-                {
                     return false;
-                }
+                
             }
             else
-            {
                 return false;
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection conexion = new SqlConnection("server=CHUY ; database=Bibliotech ; integrated security = true");
-                List<string> Op = new List<string>();
-                conexion.Open();
-                SqlDataReader myReader = null;
-                string sql = "select * from Usuarios left join rol on rol.Id_Rol = Usuarios.Id_Rol left join Rol_Operacion on Rol_Operacion.Id_Rol = Rol.Id_Rol where Correo = '" + textBoxUser.Text + "' AND Usuarios.Contrasena='" + textBoxPass.Text + "' and rol.Nombre != 'Cliente'";
-                SqlCommand myCommand = new SqlCommand(sql, conexion);
+                SqlDataReader myReader = conexion.ReaderQuery("select * from Usuarios left join rol on rol.Id_Rol = Usuarios.Id_Rol left join Rol_Operacion on Rol_Operacion.Id_Rol = Rol.Id_Rol where Correo = '" + textBoxUser.Text + "' AND Usuarios.Contrasena='" + textBoxPass.Text + "' and rol.Nombre != 'Cliente'");
 
-                //Ejecutar el comando SQL
-                myReader = myCommand.ExecuteReader();
-                
                 if (myReader.Read() && email_bien_escrito(textBoxUser.Text))
                 {
                     Form1 form;
-                    if (myReader["Id_Rol"].ToString().Equals("1"))
-                    {
+                    if (myReader["Id_Rol"].ToString().Equals("1"))                   
+                        form = new Form1(myReader[1].ToString(), myReader[10].ToString(), myReader[3].ToString(), myReader[2].ToString());                   
+                    else  
                         form = new Form1(myReader[1].ToString(), myReader[10].ToString(), myReader[3].ToString(), myReader[2].ToString());
-                    }
-                    else
-                    {
-                        form = new Form1(myReader[1].ToString(), myReader[10].ToString(), myReader[3].ToString(), myReader[2].ToString());
-                    }
                     
                     form.Show();
                     Hide();
@@ -82,9 +65,6 @@ namespace Bibliotech
             {
                 MessageBox.Show(ex.ToString());
             }
-
-            
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -99,7 +79,14 @@ namespace Bibliotech
 
         private void Acceso_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'bibliotechDataSet8.Municipios_Estado' Puede moverla o quitarla según sea necesario.
+            this.municipios_EstadoTableAdapter.Fill(this.bibliotechDataSet8.Municipios_Estado);
+            
+        }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+           
         }
     }
 }

@@ -105,11 +105,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BibliotechDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BibliotechDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta.Designer.cs">
+      <DependentUpon>Consulta.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSetEditorial.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,6 +136,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dataSetPL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSViewEmpleados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSViewEmpleados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSViewLibros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSViewLibros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSViewMultas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSViewMultas.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -157,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta.resx">
+      <DependentUpon>Consulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -265,6 +294,17 @@
     <None Include="BibliotechDataSet7.xss">
       <DependentUpon>BibliotechDataSet7.xsd</DependentUpon>
     </None>
+    <None Include="BibliotechDataSet8.xsc">
+      <DependentUpon>BibliotechDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet8.xss">
+      <DependentUpon>BibliotechDataSet8.xsd</DependentUpon>
+    </None>
     <None Include="DataSetEditorial.xsc">
       <DependentUpon>DataSetEditorial.xsd</DependentUpon>
     </None>
@@ -297,6 +337,39 @@
     </None>
     <None Include="dataSetPL.xss">
       <DependentUpon>dataSetPL.xsd</DependentUpon>
+    </None>
+    <None Include="DSViewEmpleados.xsc">
+      <DependentUpon>DSViewEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="DSViewEmpleados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSViewEmpleados.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSViewEmpleados.xss">
+      <DependentUpon>DSViewEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="DSViewLibros.xsc">
+      <DependentUpon>DSViewLibros.xsd</DependentUpon>
+    </None>
+    <None Include="DSViewLibros.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSViewLibros.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSViewLibros.xss">
+      <DependentUpon>DSViewLibros.xsd</DependentUpon>
+    </None>
+    <None Include="DSViewMultas.xsc">
+      <DependentUpon>DSViewMultas.xsd</DependentUpon>
+    </None>
+    <None Include="DSViewMultas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSViewMultas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSViewMultas.xss">
+      <DependentUpon>DSViewMultas.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -5,39 +5,45 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Bibliotech
 {
     public class Conexion
     {
-        static string conexion = "server=CHUY; database=Bibliotech; Integrated Security=True";
-        SqlConnection connection;
+        private string con;
         public Conexion()
         {
-            connection = new SqlConnection(conexion);
+            this.con = "server=CHUY; database=Bibliotech; Integrated Security=True";
         }
-        public void Conectar()
+        public SqlDataReader ReaderQuery(string sql)
         {
-            connection.Open();
-            //MessageBox.Show("Conexion exitosa");
+            SqlConnection conexion = new SqlConnection(con);
+
+            conexion.Open();
+            SqlDataReader myReader = null;
+
+            SqlCommand myCommand = new SqlCommand(sql, conexion);
+
+            //Ejecutar el comando SQL
+            myReader = myCommand.ExecuteReader();
+
+            return myReader;
         }
 
-        public void Desconectar()
+        public DataSet ReaderQueryT(string sql, string vista)
         {
-            connection.Close();
-            //MessageBox.Show("Conexion Cerrada");
+            SqlConnection conexion = new SqlConnection(con);
+            SqlDataAdapter sqlData = new SqlDataAdapter(sql, con);
+
+            conexion.Open();
+            DataSet ds = new DataSet();
+
+            sqlData.Fill(ds, vista);
+
+            return ds;
         }
 
-        public void LLenarTabla(DataGridView dataGridView)
-        {
-            Conectar();
-            SqlCommand cmd = new SqlCommand("Select * from Modulo", connection);
-            SqlDataAdapter adp = new SqlDataAdapter();
-            adp.SelectCommand = cmd;
-            System.Data.DataTable tabla = new System.Data.DataTable();
-            adp.Fill(tabla);
-            dataGridView.DataSource = tabla;
-            Desconectar();
-        }
+
     }
 }

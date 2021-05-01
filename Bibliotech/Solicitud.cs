@@ -14,6 +14,7 @@ namespace Bibliotech
     public partial class Solicitud : Form
     {
         private int IdPresta;
+        Conexion conexion = new Conexion();
         public Solicitud(int IdPresta)
         {
             this.IdPresta = IdPresta;
@@ -109,25 +110,11 @@ namespace Bibliotech
             this.prestamos_LibrosTableAdapter.FillByIDPresta(this.dataSetPL.Prestamos_Libros, IdPresta);
         
         }
-        private SqlDataReader readerQuery(string sql)
-        {
-            SqlConnection conexion = new SqlConnection("server=CHUY ; database=Bibliotech ; integrated security = true");
-
-            conexion.Open();
-            SqlDataReader myReader = null;
-            
-            SqlCommand myCommand = new SqlCommand(sql, conexion);
-
-            //Ejecutar el comando SQL
-            myReader = myCommand.ExecuteReader();
-
-            return myReader;
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlDataReader myReader = readerQuery("update Prestamos_Libros set Aplica_Multa = case when GETDATE() > Fecha_Entrega then 1 else 0 end, Monto = case when GETDATE() > Fecha_Entrega then 10 else 0 end");
+                SqlDataReader myReader = conexion.ReaderQuery("update Prestamos_Libros set Aplica_Multa = case when GETDATE() > Fecha_Entrega then 1 else 0 end, Monto = case when GETDATE() > Fecha_Entrega then 10 else 0 end");
                 this.prestamos_LibrosTableAdapter.FillByIDPresta(this.dataSetPL.Prestamos_Libros, IdPresta);
                 
             }
@@ -142,7 +129,7 @@ namespace Bibliotech
             double monto = 0;
             try
             {
-                SqlDataReader myReader = readerQuery("select *from Prestamos_Libros");
+                SqlDataReader myReader = conexion.ReaderQuery("select *from Prestamos_Libros where Id_prestamo = "+IdPresta);
                 this.prestamos_LibrosTableAdapter.FillByIDPresta(this.dataSetPL.Prestamos_Libros, IdPresta);
                 while (myReader.Read())
                 {

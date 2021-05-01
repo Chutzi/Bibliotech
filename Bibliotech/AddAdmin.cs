@@ -17,7 +17,6 @@ namespace Bibliotech
         {
             InitializeComponent();
         }
-        Conexion co = new Conexion();
         
         private void button1_Click(object sender, EventArgs e)
         {
@@ -37,6 +36,8 @@ namespace Bibliotech
 
         private void AddAdmin_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'bibliotechDataSet8.Municipios_Estado' Puede moverla o quitarla según sea necesario.
+            this.municipios_EstadoTableAdapter.Fill(this.bibliotechDataSet8.Municipios_Estado);
             // TODO: esta línea de código carga datos en la tabla 'bibliotechDataSet5.Usuarios' Puede moverla o quitarla según sea necesario.
             this.usuariosTableAdapter1.Fill(this.bibliotechDataSet5.Usuarios);
             usuariosBindingSource.DataSource = bibliotechDataSet5.Usuarios;
@@ -48,7 +49,7 @@ namespace Bibliotech
             this.operacionesTableAdapter.Fill(this.bibliotechDataSet1.Operaciones);
             // TODO: esta línea de código carga datos en la tabla 'bibliotechDataSet.Modulo' Puede moverla o quitarla según sea necesario.
             this.moduloTableAdapter.Fill(this.bibliotechDataSet.Modulo);
-            
+            tbMun.Text = comboBox1.SelectedValue.ToString();
 
         }
 
@@ -65,11 +66,6 @@ namespace Bibliotech
                     this.moduloTableAdapter.Fill(this.bibliotechDataSet.Modulo);
 
             }
-        }
-
-        private void moduloBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -208,11 +204,6 @@ namespace Bibliotech
            
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bNewuser_Click(object sender, EventArgs e)
         {
             try
@@ -224,7 +215,6 @@ namespace Bibliotech
                 tbCalle.Text = "";
                 tbCol.Text = "";
                 tbEdo.Text = "";
-                tbMun.Text = "";
                 tbRol.Text = "";
                 bibliotechDataSet5.Usuarios.AddUsuariosRow(tbName.Text, tbPass.Text, 1, tbCalle.Text, tbCol.Text, 1, 19, tbCorreo.Text);
 
@@ -281,6 +271,16 @@ namespace Bibliotech
             }
             //else
             this.usuariosTableAdapter1.Fill(this.bibliotechDataSet5.Usuarios);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbMun.Text = comboBox1.SelectedValue.ToString();
+        }
+
+        private void tbMun_TextChanged(object sender, EventArgs e)
+        {
+            comboBox1.SelectedValue = tbMun.Text;
         }
     }
 }
