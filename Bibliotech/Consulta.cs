@@ -84,5 +84,10 @@ namespace Bibliotech
                 dateTimePicker2.Enabled = false;
             }
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,13 @@ namespace Bibliotech
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Solicitud));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelMonto = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttondelete = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonNew = new System.Windows.Forms.Button();
@@ -64,17 +70,12 @@ namespace Bibliotech
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prestamos_LibrosTableAdapter = new Bibliotech.dataSetPLTableAdapters.Prestamos_LibrosTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelMonto = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosLibrosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,6 +97,58 @@ namespace Bibliotech
             this.panel1.Size = new System.Drawing.Size(800, 480);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelMonto);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(556, 287);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(189, 147);
+            this.groupBox1.TabIndex = 59;
+            this.groupBox1.TabStop = false;
+            // 
+            // labelMonto
+            // 
+            this.labelMonto.AutoSize = true;
+            this.labelMonto.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMonto.ForeColor = System.Drawing.Color.Green;
+            this.labelMonto.Location = new System.Drawing.Point(20, 59);
+            this.labelMonto.Name = "labelMonto";
+            this.labelMonto.Size = new System.Drawing.Size(18, 20);
+            this.labelMonto.TabIndex = 58;
+            this.labelMonto.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Green;
+            this.label6.Location = new System.Drawing.Point(20, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 20);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Monto a Pagar: $";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(597, 240);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(116, 23);
+            this.button2.TabIndex = 56;
+            this.button2.Text = "Ver Retrasos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(454, 240);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "Actualizar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttondelete
             // 
@@ -420,76 +473,25 @@ namespace Bibliotech
             // 
             this.prestamos_LibrosTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(454, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(597, 240);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 23);
-            this.button2.TabIndex = 56;
-            this.button2.Text = "Ver Retrasos";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Green;
-            this.label6.Location = new System.Drawing.Point(20, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 20);
-            this.label6.TabIndex = 57;
-            this.label6.Text = "Monto a Pagar: $";
-            // 
-            // labelMonto
-            // 
-            this.labelMonto.AutoSize = true;
-            this.labelMonto.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMonto.ForeColor = System.Drawing.Color.Green;
-            this.labelMonto.Location = new System.Drawing.Point(20, 59);
-            this.labelMonto.Name = "labelMonto";
-            this.labelMonto.Size = new System.Drawing.Size(18, 20);
-            this.labelMonto.TabIndex = 58;
-            this.labelMonto.Text = "0";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.labelMonto);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(556, 287);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(189, 147);
-            this.groupBox1.TabIndex = 59;
-            this.groupBox1.TabStop = false;
-            // 
             // Solicitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 480);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Solicitud";
             this.Text = "Solicitud de Préstamo";
             this.Load += new System.EventHandler(this.Solicitud_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosLibrosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

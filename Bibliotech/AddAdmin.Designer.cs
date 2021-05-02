@@ -30,6 +30,7 @@ namespace Bibliotech
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAdmin));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idModuloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,6 +112,9 @@ namespace Bibliotech
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbMun = new System.Windows.Forms.TextBox();
             this.municipios_EstadoTableAdapter = new Bibliotech.BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moduloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet)).BeginInit();
@@ -131,13 +135,16 @@ namespace Bibliotech
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 47);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(3)))), ((int)(((byte)(15)))));
+            this.label1.Location = new System.Drawing.Point(41, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 24);
             this.label1.TabIndex = 0;
@@ -151,7 +158,7 @@ namespace Bibliotech
             this.idModuloDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.moduloBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 102);
+            this.dataGridView1.Location = new System.Drawing.Point(45, 160);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(262, 150);
             this.dataGridView1.TabIndex = 1;
@@ -182,7 +189,7 @@ namespace Bibliotech
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(232, 50);
+            this.button1.Location = new System.Drawing.Point(232, 108);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -200,7 +207,7 @@ namespace Bibliotech
             this.descripcionDataGridViewTextBoxColumn,
             this.idModuloDataGridViewTextBoxColumn1});
             this.dataGridView2.DataSource = this.operacionesBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(45, 350);
+            this.dataGridView2.Location = new System.Drawing.Point(45, 408);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(559, 150);
             this.dataGridView2.TabIndex = 3;
@@ -251,7 +258,7 @@ namespace Bibliotech
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(415, 306);
+            this.button2.Location = new System.Drawing.Point(415, 364);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -267,7 +274,8 @@ namespace Bibliotech
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 294);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(3)))), ((int)(((byte)(15)))));
+            this.label2.Location = new System.Drawing.Point(41, 352);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 24);
             this.label2.TabIndex = 5;
@@ -277,7 +285,8 @@ namespace Bibliotech
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(325, 46);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(3)))), ((int)(((byte)(15)))));
+            this.label3.Location = new System.Drawing.Point(325, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 24);
             this.label3.TabIndex = 8;
@@ -285,7 +294,7 @@ namespace Bibliotech
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(516, 49);
+            this.button3.Location = new System.Drawing.Point(516, 107);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 7;
@@ -302,7 +311,7 @@ namespace Bibliotech
             this.idRolDataGridViewTextBoxColumn2,
             this.nombreDataGridViewTextBoxColumn3});
             this.dataGridView3.DataSource = this.rol_OperacionBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(329, 102);
+            this.dataGridView3.Location = new System.Drawing.Point(329, 160);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(262, 150);
             this.dataGridView3.TabIndex = 6;
@@ -344,7 +353,7 @@ namespace Bibliotech
             this.idOperacionDataGridViewTextBoxColumn1,
             this.idRolDataGridViewTextBoxColumn});
             this.dataGridView4.DataSource = this.rolOperacionBindingSource;
-            this.dataGridView4.Location = new System.Drawing.Point(45, 599);
+            this.dataGridView4.Location = new System.Drawing.Point(45, 657);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(354, 150);
             this.dataGridView4.TabIndex = 9;
@@ -386,7 +395,8 @@ namespace Bibliotech
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 540);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(3)))), ((int)(((byte)(15)))));
+            this.label4.Location = new System.Drawing.Point(41, 598);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(150, 24);
             this.label4.TabIndex = 11;
@@ -394,7 +404,7 @@ namespace Bibliotech
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(324, 543);
+            this.button4.Location = new System.Drawing.Point(324, 601);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 10;
@@ -406,7 +416,8 @@ namespace Bibliotech
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(697, 303);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(16, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 24);
             this.label5.TabIndex = 14;
@@ -428,9 +439,9 @@ namespace Bibliotech
             this.Municipio_id,
             this.Estado_id});
             this.dataGridView5.DataSource = this.usuariosBindingSource1;
-            this.dataGridView5.Location = new System.Drawing.Point(701, 361);
+            this.dataGridView5.Location = new System.Drawing.Point(679, 361);
             this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(445, 150);
+            this.dataGridView5.Size = new System.Drawing.Size(606, 150);
             this.dataGridView5.TabIndex = 12;
             this.dataGridView5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView5_KeyDown);
             // 
@@ -508,9 +519,9 @@ namespace Bibliotech
             // 
             // textBoxSearc
             // 
-            this.textBoxSearc.Location = new System.Drawing.Point(821, 306);
+            this.textBoxSearc.Location = new System.Drawing.Point(1259, 305);
             this.textBoxSearc.Name = "textBoxSearc";
-            this.textBoxSearc.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSearc.Size = new System.Drawing.Size(76, 20);
             this.textBoxSearc.TabIndex = 15;
             this.textBoxSearc.Visible = false;
             this.textBoxSearc.TextChanged += new System.EventHandler(this.textBoxSearc_TextChanged);
@@ -521,7 +532,7 @@ namespace Bibliotech
             this.comboBoxCol.Items.AddRange(new object[] {
             "Nombre",
             "Correo"});
-            this.comboBoxCol.Location = new System.Drawing.Point(927, 305);
+            this.comboBoxCol.Location = new System.Drawing.Point(1226, 334);
             this.comboBoxCol.Name = "comboBoxCol";
             this.comboBoxCol.Size = new System.Drawing.Size(121, 21);
             this.comboBoxCol.TabIndex = 16;
@@ -532,11 +543,14 @@ namespace Bibliotech
             this.bDeleteuser.BackColor = System.Drawing.Color.Red;
             this.bDeleteuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bDeleteuser.ForeColor = System.Drawing.Color.White;
-            this.bDeleteuser.Location = new System.Drawing.Point(699, 529);
+            this.bDeleteuser.Image = ((System.Drawing.Image)(resources.GetObject("bDeleteuser.Image")));
+            this.bDeleteuser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bDeleteuser.Location = new System.Drawing.Point(772, 313);
             this.bDeleteuser.Name = "bDeleteuser";
             this.bDeleteuser.Size = new System.Drawing.Size(75, 23);
             this.bDeleteuser.TabIndex = 42;
             this.bDeleteuser.Text = "Eliminar";
+            this.bDeleteuser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bDeleteuser.UseVisualStyleBackColor = false;
             this.bDeleteuser.Click += new System.EventHandler(this.bDeleteuser_Click);
             // 
@@ -545,11 +559,14 @@ namespace Bibliotech
             this.bSaveuser.BackColor = System.Drawing.Color.SeaGreen;
             this.bSaveuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSaveuser.ForeColor = System.Drawing.Color.White;
-            this.bSaveuser.Location = new System.Drawing.Point(942, 529);
+            this.bSaveuser.Image = ((System.Drawing.Image)(resources.GetObject("bSaveuser.Image")));
+            this.bSaveuser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bSaveuser.Location = new System.Drawing.Point(1015, 313);
             this.bSaveuser.Name = "bSaveuser";
             this.bSaveuser.Size = new System.Drawing.Size(75, 23);
             this.bSaveuser.TabIndex = 41;
             this.bSaveuser.Text = "Guardar";
+            this.bSaveuser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bSaveuser.UseVisualStyleBackColor = false;
             this.bSaveuser.Click += new System.EventHandler(this.bSaveuser_Click);
             // 
@@ -559,11 +576,14 @@ namespace Bibliotech
             this.bNewuser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bNewuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bNewuser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bNewuser.Location = new System.Drawing.Point(1040, 529);
+            this.bNewuser.Image = ((System.Drawing.Image)(resources.GetObject("bNewuser.Image")));
+            this.bNewuser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bNewuser.Location = new System.Drawing.Point(1113, 313);
             this.bNewuser.Name = "bNewuser";
             this.bNewuser.Size = new System.Drawing.Size(78, 23);
             this.bNewuser.TabIndex = 38;
             this.bNewuser.Text = "Nuevo";
+            this.bNewuser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bNewuser.UseVisualStyleBackColor = false;
             this.bNewuser.Click += new System.EventHandler(this.bNewuser_Click);
             // 
@@ -572,11 +592,14 @@ namespace Bibliotech
             this.bCanceluser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bCanceluser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCanceluser.ForeColor = System.Drawing.Color.White;
-            this.bCanceluser.Location = new System.Drawing.Point(861, 529);
+            this.bCanceluser.Image = ((System.Drawing.Image)(resources.GetObject("bCanceluser.Image")));
+            this.bCanceluser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bCanceluser.Location = new System.Drawing.Point(934, 313);
             this.bCanceluser.Name = "bCanceluser";
             this.bCanceluser.Size = new System.Drawing.Size(75, 23);
             this.bCanceluser.TabIndex = 40;
             this.bCanceluser.Text = "Cancelar";
+            this.bCanceluser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bCanceluser.UseVisualStyleBackColor = false;
             this.bCanceluser.Click += new System.EventHandler(this.bCanceluser_Click);
             // 
@@ -585,11 +608,14 @@ namespace Bibliotech
             this.bEdituser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bEdituser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bEdituser.ForeColor = System.Drawing.Color.White;
-            this.bEdituser.Location = new System.Drawing.Point(780, 529);
+            this.bEdituser.Image = ((System.Drawing.Image)(resources.GetObject("bEdituser.Image")));
+            this.bEdituser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bEdituser.Location = new System.Drawing.Point(853, 313);
             this.bEdituser.Name = "bEdituser";
             this.bEdituser.Size = new System.Drawing.Size(75, 23);
             this.bEdituser.TabIndex = 39;
             this.bEdituser.Text = "Editar";
+            this.bEdituser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bEdituser.UseVisualStyleBackColor = false;
             this.bEdituser.Click += new System.EventHandler(this.bEdituser_Click);
             // 
@@ -614,9 +640,10 @@ namespace Bibliotech
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.tbName);
             this.groupBox1.Controls.Add(this.tbMun);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.groupBox1.Location = new System.Drawing.Point(620, 101);
+            this.groupBox1.Location = new System.Drawing.Point(679, 101);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(606, 198);
             this.groupBox1.TabIndex = 43;
@@ -832,12 +859,43 @@ namespace Bibliotech
             // 
             this.municipios_EstadoTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(679, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(625, 35);
+            this.panel1.TabIndex = 44;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Crimson;
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Location = new System.Drawing.Point(45, 36);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(546, 35);
+            this.panel2.TabIndex = 45;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(11, 4);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(106, 24);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Seguridad";
+            // 
             // AddAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(722, 389);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bDeleteuser);
             this.Controls.Add(this.bSaveuser);
@@ -846,7 +904,6 @@ namespace Bibliotech
             this.Controls.Add(this.bEdituser);
             this.Controls.Add(this.comboBoxCol);
             this.Controls.Add(this.textBoxSearc);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
@@ -860,8 +917,9 @@ namespace Bibliotech
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddAdmin";
-            this.Text = "AddAdmin";
+            this.Text = "Seguridad";
             this.Load += new System.EventHandler(this.AddAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moduloBindingSource)).EndInit();
@@ -884,6 +942,10 @@ namespace Bibliotech
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -974,6 +1036,9 @@ namespace Bibliotech
         private System.Windows.Forms.BindingSource municipiosEstadoBindingSource;
         private BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter municipios_EstadoTableAdapter;
         private System.Windows.Forms.TextBox tbMun;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label13;
         //private BibliotechDataSet1TableAdapters.OperacionesTableAdapter operacionesTableAdapter;
     }
 }

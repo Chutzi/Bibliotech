@@ -30,6 +30,7 @@ namespace Bibliotech
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BD));
             this.dataGridViewBook = new System.Windows.Forms.DataGridView();
             this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,6 +112,12 @@ namespace Bibliotech
             this.bCancelBook = new System.Windows.Forms.Button();
             this.bEditBook = new System.Windows.Forms.Button();
             this.librosTableAdapter = new Bibliotech.DataSetLibrosTableAdapters.LibrosTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetLibros)).BeginInit();
@@ -123,6 +130,12 @@ namespace Bibliotech
             ((System.ComponentModel.ISupportInitialize)(this.editorialBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetEditorial)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewBook
@@ -207,7 +220,8 @@ namespace Bibliotech
             // 
             this.Libros.AutoSize = true;
             this.Libros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Libros.Location = new System.Drawing.Point(181, 39);
+            this.Libros.ForeColor = System.Drawing.Color.White;
+            this.Libros.Location = new System.Drawing.Point(15, 10);
             this.Libros.Name = "Libros";
             this.Libros.Size = new System.Drawing.Size(67, 24);
             this.Libros.TabIndex = 2;
@@ -377,7 +391,8 @@ namespace Bibliotech
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(181, 389);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(8, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 24);
             this.label5.TabIndex = 21;
@@ -395,7 +410,7 @@ namespace Bibliotech
             this.apMaternoDataGridViewTextBoxColumn,
             this.nacionalidadDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.autoresBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(185, 428);
+            this.dataGridView1.Location = new System.Drawing.Point(184, 508);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(514, 194);
             this.dataGridView1.TabIndex = 20;
@@ -481,7 +496,7 @@ namespace Bibliotech
             this.groupBox2.Enabled = false;
             this.groupBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.groupBox2.Location = new System.Drawing.Point(728, 428);
+            this.groupBox2.Location = new System.Drawing.Point(727, 508);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(308, 224);
             this.groupBox2.TabIndex = 23;
@@ -573,7 +588,8 @@ namespace Bibliotech
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(181, 689);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(14, 8);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 24);
             this.label10.TabIndex = 25;
@@ -590,7 +606,7 @@ namespace Bibliotech
             this.telefonoDataGridViewTextBoxColumn,
             this.correoDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.editorialBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(185, 739);
+            this.dataGridView2.Location = new System.Drawing.Point(183, 881);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(514, 194);
             this.dataGridView2.TabIndex = 24;
@@ -640,7 +656,7 @@ namespace Bibliotech
             this.groupBox3.Enabled = false;
             this.groupBox3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.groupBox3.Location = new System.Drawing.Point(732, 739);
+            this.groupBox3.Location = new System.Drawing.Point(730, 881);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(308, 227);
             this.groupBox3.TabIndex = 24;
@@ -716,11 +732,14 @@ namespace Bibliotech
             this.buttonNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonNew.Location = new System.Drawing.Point(621, 939);
+            this.buttonNew.Image = ((System.Drawing.Image)(resources.GetObject("buttonNew.Image")));
+            this.buttonNew.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonNew.Location = new System.Drawing.Point(619, 1081);
             this.buttonNew.Name = "buttonNew";
             this.buttonNew.Size = new System.Drawing.Size(78, 23);
             this.buttonNew.TabIndex = 20;
             this.buttonNew.Text = "Nuevo";
+            this.buttonNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNew.UseVisualStyleBackColor = false;
             this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
@@ -729,11 +748,14 @@ namespace Bibliotech
             this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
-            this.buttonEdit.Location = new System.Drawing.Point(361, 939);
+            this.buttonEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit.Image")));
+            this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEdit.Location = new System.Drawing.Point(359, 1081);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 22;
             this.buttonEdit.Text = "Editar";
+            this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
@@ -742,11 +764,14 @@ namespace Bibliotech
             this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.ForeColor = System.Drawing.Color.White;
-            this.buttonCancel.Location = new System.Drawing.Point(442, 939);
+            this.buttonCancel.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancel.Image")));
+            this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCancel.Location = new System.Drawing.Point(440, 1081);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 23;
             this.buttonCancel.Text = "Cancelar";
+            this.buttonCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -755,11 +780,14 @@ namespace Bibliotech
             this.buttonSave.BackColor = System.Drawing.Color.SeaGreen;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.ForeColor = System.Drawing.Color.White;
-            this.buttonSave.Location = new System.Drawing.Point(523, 939);
+            this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
+            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSave.Location = new System.Drawing.Point(521, 1081);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 24;
             this.buttonSave.Text = "Guardar";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
@@ -769,7 +797,7 @@ namespace Bibliotech
             // 
             // textBoxSearchEd
             // 
-            this.textBoxSearchEd.Location = new System.Drawing.Point(361, 693);
+            this.textBoxSearchEd.Location = new System.Drawing.Point(183, 1152);
             this.textBoxSearchEd.Name = "textBoxSearchEd";
             this.textBoxSearchEd.Size = new System.Drawing.Size(100, 20);
             this.textBoxSearchEd.TabIndex = 26;
@@ -780,11 +808,14 @@ namespace Bibliotech
             this.buttondelete.BackColor = System.Drawing.Color.Red;
             this.buttondelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttondelete.ForeColor = System.Drawing.Color.White;
-            this.buttondelete.Location = new System.Drawing.Point(280, 939);
+            this.buttondelete.Image = ((System.Drawing.Image)(resources.GetObject("buttondelete.Image")));
+            this.buttondelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttondelete.Location = new System.Drawing.Point(278, 1081);
             this.buttondelete.Name = "buttondelete";
             this.buttondelete.Size = new System.Drawing.Size(75, 23);
             this.buttondelete.TabIndex = 27;
             this.buttondelete.Text = "Eliminar";
+            this.buttondelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttondelete.UseVisualStyleBackColor = false;
             this.buttondelete.Click += new System.EventHandler(this.buttondelete_Click);
             // 
@@ -793,11 +824,14 @@ namespace Bibliotech
             this.buttonDeleteAutor.BackColor = System.Drawing.Color.Red;
             this.buttonDeleteAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteAutor.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteAutor.Location = new System.Drawing.Point(279, 640);
+            this.buttonDeleteAutor.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteAutor.Image")));
+            this.buttonDeleteAutor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDeleteAutor.Location = new System.Drawing.Point(278, 720);
             this.buttonDeleteAutor.Name = "buttonDeleteAutor";
             this.buttonDeleteAutor.Size = new System.Drawing.Size(75, 23);
             this.buttonDeleteAutor.TabIndex = 32;
             this.buttonDeleteAutor.Text = "Eliminar";
+            this.buttonDeleteAutor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDeleteAutor.UseVisualStyleBackColor = false;
             this.buttonDeleteAutor.Click += new System.EventHandler(this.buttonDeleteAutor_Click);
             // 
@@ -806,11 +840,14 @@ namespace Bibliotech
             this.buttonSaveAutor.BackColor = System.Drawing.Color.SeaGreen;
             this.buttonSaveAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveAutor.ForeColor = System.Drawing.Color.White;
-            this.buttonSaveAutor.Location = new System.Drawing.Point(522, 640);
+            this.buttonSaveAutor.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveAutor.Image")));
+            this.buttonSaveAutor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSaveAutor.Location = new System.Drawing.Point(521, 720);
             this.buttonSaveAutor.Name = "buttonSaveAutor";
             this.buttonSaveAutor.Size = new System.Drawing.Size(75, 23);
             this.buttonSaveAutor.TabIndex = 31;
             this.buttonSaveAutor.Text = "Guardar";
+            this.buttonSaveAutor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSaveAutor.UseVisualStyleBackColor = false;
             this.buttonSaveAutor.Click += new System.EventHandler(this.buttonSaveAutor_Click);
             // 
@@ -820,11 +857,14 @@ namespace Bibliotech
             this.buttonNewAutor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNewAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNewAutor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonNewAutor.Location = new System.Drawing.Point(620, 640);
+            this.buttonNewAutor.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewAutor.Image")));
+            this.buttonNewAutor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonNewAutor.Location = new System.Drawing.Point(619, 720);
             this.buttonNewAutor.Name = "buttonNewAutor";
             this.buttonNewAutor.Size = new System.Drawing.Size(78, 23);
             this.buttonNewAutor.TabIndex = 28;
             this.buttonNewAutor.Text = "Nuevo";
+            this.buttonNewAutor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNewAutor.UseVisualStyleBackColor = false;
             this.buttonNewAutor.Click += new System.EventHandler(this.buttonNewAutor_Click);
             // 
@@ -833,11 +873,14 @@ namespace Bibliotech
             this.buttoncancelAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttoncancelAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttoncancelAutor.ForeColor = System.Drawing.Color.White;
-            this.buttoncancelAutor.Location = new System.Drawing.Point(441, 640);
+            this.buttoncancelAutor.Image = ((System.Drawing.Image)(resources.GetObject("buttoncancelAutor.Image")));
+            this.buttoncancelAutor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttoncancelAutor.Location = new System.Drawing.Point(440, 720);
             this.buttoncancelAutor.Name = "buttoncancelAutor";
             this.buttoncancelAutor.Size = new System.Drawing.Size(75, 23);
             this.buttoncancelAutor.TabIndex = 30;
             this.buttoncancelAutor.Text = "Cancelar";
+            this.buttoncancelAutor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttoncancelAutor.UseVisualStyleBackColor = false;
             this.buttoncancelAutor.Click += new System.EventHandler(this.buttoncancelAutor_Click);
             // 
@@ -846,11 +889,14 @@ namespace Bibliotech
             this.buttonEditAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonEditAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditAutor.ForeColor = System.Drawing.Color.White;
-            this.buttonEditAutor.Location = new System.Drawing.Point(360, 640);
+            this.buttonEditAutor.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditAutor.Image")));
+            this.buttonEditAutor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEditAutor.Location = new System.Drawing.Point(359, 720);
             this.buttonEditAutor.Name = "buttonEditAutor";
             this.buttonEditAutor.Size = new System.Drawing.Size(75, 23);
             this.buttonEditAutor.TabIndex = 29;
             this.buttonEditAutor.Text = "Editar";
+            this.buttonEditAutor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEditAutor.UseVisualStyleBackColor = false;
             this.buttonEditAutor.Click += new System.EventHandler(this.buttonEditAutor_Click);
             // 
@@ -863,11 +909,14 @@ namespace Bibliotech
             this.bDeleteBook.BackColor = System.Drawing.Color.Red;
             this.bDeleteBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bDeleteBook.ForeColor = System.Drawing.Color.White;
+            this.bDeleteBook.Image = ((System.Drawing.Image)(resources.GetObject("bDeleteBook.Image")));
+            this.bDeleteBook.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bDeleteBook.Location = new System.Drawing.Point(279, 351);
             this.bDeleteBook.Name = "bDeleteBook";
             this.bDeleteBook.Size = new System.Drawing.Size(75, 23);
             this.bDeleteBook.TabIndex = 37;
             this.bDeleteBook.Text = "Eliminar";
+            this.bDeleteBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bDeleteBook.UseVisualStyleBackColor = false;
             this.bDeleteBook.Click += new System.EventHandler(this.bDeleteBook_Click);
             // 
@@ -876,11 +925,14 @@ namespace Bibliotech
             this.bSaveBook.BackColor = System.Drawing.Color.SeaGreen;
             this.bSaveBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSaveBook.ForeColor = System.Drawing.Color.White;
+            this.bSaveBook.Image = ((System.Drawing.Image)(resources.GetObject("bSaveBook.Image")));
+            this.bSaveBook.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bSaveBook.Location = new System.Drawing.Point(522, 351);
             this.bSaveBook.Name = "bSaveBook";
             this.bSaveBook.Size = new System.Drawing.Size(75, 23);
             this.bSaveBook.TabIndex = 36;
             this.bSaveBook.Text = "Guardar";
+            this.bSaveBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bSaveBook.UseVisualStyleBackColor = false;
             this.bSaveBook.Click += new System.EventHandler(this.bSaveBook_Click);
             // 
@@ -890,11 +942,14 @@ namespace Bibliotech
             this.bNewBook.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bNewBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bNewBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bNewBook.Image = ((System.Drawing.Image)(resources.GetObject("bNewBook.Image")));
+            this.bNewBook.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bNewBook.Location = new System.Drawing.Point(620, 351);
             this.bNewBook.Name = "bNewBook";
             this.bNewBook.Size = new System.Drawing.Size(78, 23);
             this.bNewBook.TabIndex = 33;
             this.bNewBook.Text = "Nuevo";
+            this.bNewBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bNewBook.UseVisualStyleBackColor = false;
             this.bNewBook.Click += new System.EventHandler(this.bNewBook_Click);
             // 
@@ -903,11 +958,14 @@ namespace Bibliotech
             this.bCancelBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bCancelBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCancelBook.ForeColor = System.Drawing.Color.White;
+            this.bCancelBook.Image = ((System.Drawing.Image)(resources.GetObject("bCancelBook.Image")));
+            this.bCancelBook.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bCancelBook.Location = new System.Drawing.Point(441, 351);
             this.bCancelBook.Name = "bCancelBook";
             this.bCancelBook.Size = new System.Drawing.Size(75, 23);
             this.bCancelBook.TabIndex = 35;
             this.bCancelBook.Text = "Cancelar";
+            this.bCancelBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bCancelBook.UseVisualStyleBackColor = false;
             this.bCancelBook.Click += new System.EventHandler(this.bCancelBook_Click);
             // 
@@ -916,11 +974,14 @@ namespace Bibliotech
             this.bEditBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bEditBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bEditBook.ForeColor = System.Drawing.Color.White;
+            this.bEditBook.Image = ((System.Drawing.Image)(resources.GetObject("bEditBook.Image")));
+            this.bEditBook.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bEditBook.Location = new System.Drawing.Point(360, 351);
             this.bEditBook.Name = "bEditBook";
             this.bEditBook.Size = new System.Drawing.Size(75, 23);
             this.bEditBook.TabIndex = 34;
             this.bEditBook.Text = "Editar";
+            this.bEditBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bEditBook.UseVisualStyleBackColor = false;
             this.bEditBook.Click += new System.EventHandler(this.bEditBook_Click);
             // 
@@ -928,12 +989,77 @@ namespace Bibliotech
             // 
             this.librosTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.Libros);
+            this.panel1.Location = new System.Drawing.Point(185, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(851, 44);
+            this.panel1.TabIndex = 38;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(184, 435);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(852, 41);
+            this.panel2.TabIndex = 39;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Navy;
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Location = new System.Drawing.Point(183, 824);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(855, 41);
+            this.panel3.TabIndex = 40;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(24, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 153);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 435);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 153);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 41;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(19, 824);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(140, 153);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 42;
+            this.pictureBox3.TabStop = false;
+            // 
             // BD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(705, 406);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(796, 437);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.textBoxSearchEd);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bDeleteBook);
             this.Controls.Add(this.bSaveBook);
             this.Controls.Add(this.bNewBook);
@@ -945,22 +1071,19 @@ namespace Bibliotech
             this.Controls.Add(this.buttoncancelAutor);
             this.Controls.Add(this.buttonEditAutor);
             this.Controls.Add(this.buttondelete);
-            this.Controls.Add(this.textBoxSearchEd);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonNew);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.Libros);
             this.Controls.Add(this.dataGridViewBook);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BD";
-            this.Text = "BD";
+            this.Text = "Catálogos";
             this.Load += new System.EventHandler(this.BD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();
@@ -977,6 +1100,15 @@ namespace Bibliotech
             ((System.ComponentModel.ISupportInitialize)(this.dataSetEditorial)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1064,5 +1196,11 @@ namespace Bibliotech
         private System.Windows.Forms.Button bNewBook;
         private System.Windows.Forms.Button bCancelBook;
         private System.Windows.Forms.Button bEditBook;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

@@ -81,12 +81,43 @@ namespace Bibliotech
         {
             // TODO: esta línea de código carga datos en la tabla 'bibliotechDataSet8.Municipios_Estado' Puede moverla o quitarla según sea necesario.
             this.municipios_EstadoTableAdapter.Fill(this.bibliotechDataSet8.Municipios_Estado);
-            
+            toolTip1.SetToolTip(pictureBox1, "¡Bienvenido a Bibliotech!");
+            toolTip1.SetToolTip(pictureBox2, "Apagar");
+            toolTip1.SetToolTip(button1, "Inicia Sesión");
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == false)
+            {
+                textBoxPass.PasswordChar = '●';
+            }
+            else
+                if (textBoxPass.Text != "")
+            {
+                textBoxPass.PasswordChar = '\0';
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("El registro de un nuevo empleado se lleva a cabo en el modulo de seguridad, espere a que sea incorporado correctamente, si no ha sido registrado acuda personalmente con el administrador para darlo de alta\n¡Gracias!", 
+                "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

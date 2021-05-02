@@ -30,8 +30,13 @@ namespace Bibliotech
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.municipiosEstadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotechDataSet8 = new Bibliotech.BibliotechDataSet8();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tbEdo = new System.Windows.Forms.TextBox();
@@ -69,24 +74,22 @@ namespace Bibliotech
             this.bibliotechDataSet5 = new Bibliotech.BibliotechDataSet5();
             this.usuariosTableAdapter = new Bibliotech.BibliotechDataSet5TableAdapters.UsuariosTableAdapter();
             this.clienteTableAdapter = new Bibliotech.BibliotechDataSet6TableAdapters.ClienteTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bibliotechDataSet8 = new Bibliotech.BibliotechDataSet8();
-            this.municipiosEstadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.municipios_EstadoTableAdapter = new Bibliotech.BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.bDeleteuser);
             this.panel1.Controls.Add(this.bSaveuser);
@@ -102,6 +105,19 @@ namespace Bibliotech
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(669, 554);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(594, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -129,6 +145,28 @@ namespace Bibliotech
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Cliente";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.municipiosEstadoBindingSource;
+            this.comboBox1.DisplayMember = "Descripcion";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(440, 140);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 25;
+            this.comboBox1.ValueMember = "Municipio_id";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // municipiosEstadoBindingSource
+            // 
+            this.municipiosEstadoBindingSource.DataMember = "Municipios_Estado";
+            this.municipiosEstadoBindingSource.DataSource = this.bibliotechDataSet8;
+            // 
+            // bibliotechDataSet8
+            // 
+            this.bibliotechDataSet8.DataSetName = "BibliotechDataSet8";
+            this.bibliotechDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -297,11 +335,14 @@ namespace Bibliotech
             this.bDeleteuser.BackColor = System.Drawing.Color.Red;
             this.bDeleteuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bDeleteuser.ForeColor = System.Drawing.Color.White;
+            this.bDeleteuser.Image = ((System.Drawing.Image)(resources.GetObject("bDeleteuser.Image")));
+            this.bDeleteuser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bDeleteuser.Location = new System.Drawing.Point(119, 463);
             this.bDeleteuser.Name = "bDeleteuser";
             this.bDeleteuser.Size = new System.Drawing.Size(75, 23);
             this.bDeleteuser.TabIndex = 52;
             this.bDeleteuser.Text = "Eliminar";
+            this.bDeleteuser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bDeleteuser.UseVisualStyleBackColor = false;
             this.bDeleteuser.Click += new System.EventHandler(this.bDeleteuser_Click);
             // 
@@ -310,11 +351,14 @@ namespace Bibliotech
             this.bSaveuser.BackColor = System.Drawing.Color.SeaGreen;
             this.bSaveuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSaveuser.ForeColor = System.Drawing.Color.White;
+            this.bSaveuser.Image = ((System.Drawing.Image)(resources.GetObject("bSaveuser.Image")));
+            this.bSaveuser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bSaveuser.Location = new System.Drawing.Point(362, 463);
             this.bSaveuser.Name = "bSaveuser";
             this.bSaveuser.Size = new System.Drawing.Size(75, 23);
             this.bSaveuser.TabIndex = 51;
             this.bSaveuser.Text = "Guardar";
+            this.bSaveuser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bSaveuser.UseVisualStyleBackColor = false;
             this.bSaveuser.Click += new System.EventHandler(this.bSaveuser_Click);
             // 
@@ -324,11 +368,14 @@ namespace Bibliotech
             this.bNewuser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bNewuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bNewuser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bNewuser.Image = ((System.Drawing.Image)(resources.GetObject("bNewuser.Image")));
+            this.bNewuser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bNewuser.Location = new System.Drawing.Point(460, 463);
             this.bNewuser.Name = "bNewuser";
             this.bNewuser.Size = new System.Drawing.Size(78, 23);
             this.bNewuser.TabIndex = 48;
             this.bNewuser.Text = "Nuevo";
+            this.bNewuser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bNewuser.UseVisualStyleBackColor = false;
             this.bNewuser.Click += new System.EventHandler(this.bNewuser_Click);
             // 
@@ -337,11 +384,14 @@ namespace Bibliotech
             this.bCanceluser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bCanceluser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCanceluser.ForeColor = System.Drawing.Color.White;
+            this.bCanceluser.Image = ((System.Drawing.Image)(resources.GetObject("bCanceluser.Image")));
+            this.bCanceluser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bCanceluser.Location = new System.Drawing.Point(281, 463);
             this.bCanceluser.Name = "bCanceluser";
             this.bCanceluser.Size = new System.Drawing.Size(75, 23);
             this.bCanceluser.TabIndex = 50;
             this.bCanceluser.Text = "Cancelar";
+            this.bCanceluser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bCanceluser.UseVisualStyleBackColor = false;
             this.bCanceluser.Click += new System.EventHandler(this.bCanceluser_Click);
             // 
@@ -350,11 +400,14 @@ namespace Bibliotech
             this.bEdituser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bEdituser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bEdituser.ForeColor = System.Drawing.Color.White;
+            this.bEdituser.Image = ((System.Drawing.Image)(resources.GetObject("bEdituser.Image")));
+            this.bEdituser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bEdituser.Location = new System.Drawing.Point(200, 463);
             this.bEdituser.Name = "bEdituser";
             this.bEdituser.Size = new System.Drawing.Size(75, 23);
             this.bEdituser.TabIndex = 49;
             this.bEdituser.Text = "Editar";
+            this.bEdituser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bEdituser.UseVisualStyleBackColor = false;
             this.bEdituser.Click += new System.EventHandler(this.bEdituser_Click);
             // 
@@ -468,28 +521,6 @@ namespace Bibliotech
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.municipiosEstadoBindingSource;
-            this.comboBox1.DisplayMember = "Descripcion";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(440, 140);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 25;
-            this.comboBox1.ValueMember = "Municipio_id";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // bibliotechDataSet8
-            // 
-            this.bibliotechDataSet8.DataSetName = "BibliotechDataSet8";
-            this.bibliotechDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // municipiosEstadoBindingSource
-            // 
-            this.municipiosEstadoBindingSource.DataMember = "Municipios_Estado";
-            this.municipiosEstadoBindingSource.DataSource = this.bibliotechDataSet8;
-            // 
             // municipios_EstadoTableAdapter
             // 
             this.municipios_EstadoTableAdapter.ClearBeforeFill = true;
@@ -500,20 +531,24 @@ namespace Bibliotech
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 554);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Clientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Clientes_FormClosing);
             this.Load += new System.EventHandler(this.Clientes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.municipiosEstadoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -563,5 +598,6 @@ namespace Bibliotech
         private BibliotechDataSet8 bibliotechDataSet8;
         private System.Windows.Forms.BindingSource municipiosEstadoBindingSource;
         private BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter municipios_EstadoTableAdapter;
+        private System.Windows.Forms.Button button1;
     }
 }

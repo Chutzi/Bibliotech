@@ -137,5 +137,21 @@ namespace Bibliotech
         {
             comboBox1.SelectedValue = tbMun.Text;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void Clientes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Impedir que el formulario se cierre pulsando X o Alt + F4
+            switch (e.CloseReason)
+            {
+                case CloseReason.UserClosing:
+                    e.Cancel = true;
+                    break;
+            }
+        }
     }
 }
