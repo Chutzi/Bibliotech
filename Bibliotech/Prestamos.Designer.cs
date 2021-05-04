@@ -66,6 +66,7 @@ namespace Bibliotech
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button1);

@@ -88,6 +88,28 @@ namespace Bibliotech
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dSViewClienteD = new Bibliotech.DSViewClienteD();
+            this.vClientesDistinguidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.v_ClientesDistinguidosTableAdapter = new Bibliotech.DSViewClienteDTableAdapters.v_ClientesDistinguidosTableAdapter();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dSViewCliente = new Bibliotech.DSViewCliente();
+            this.vClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.v_ClientesTableAdapter = new Bibliotech.DSViewClienteTableAdapters.v_ClientesTableAdapter();
+            this.idClienteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coloniaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.municipioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadPrestamosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deudaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vLibrosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSViewLibros)).BeginInit();
@@ -100,6 +122,12 @@ namespace Bibliotech
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSViewClienteD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vClientesDistinguidosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSViewCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vClientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -588,12 +616,198 @@ namespace Bibliotech
             this.panel3.Size = new System.Drawing.Size(906, 35);
             this.panel3.TabIndex = 37;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Location = new System.Drawing.Point(55, 871);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(906, 35);
+            this.panel4.TabIndex = 38;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(10, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 24);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Clientes";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idClienteDataGridViewTextBoxColumn1,
+            this.nombreDataGridViewTextBoxColumn2,
+            this.correoDataGridViewTextBoxColumn1,
+            this.calleDataGridViewTextBoxColumn1,
+            this.coloniaDataGridViewTextBoxColumn1,
+            this.municipioDataGridViewTextBoxColumn1,
+            this.estadoDataGridViewTextBoxColumn1,
+            this.cantidadPrestamosDataGridViewTextBoxColumn,
+            this.deudaDataGridViewTextBoxColumn});
+            this.dataGridView4.DataSource = this.vClientesBindingSource;
+            this.dataGridView4.Location = new System.Drawing.Point(55, 969);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.Size = new System.Drawing.Size(906, 150);
+            this.dataGridView4.TabIndex = 39;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 1120);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 23);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dSViewClienteD
+            // 
+            this.dSViewClienteD.DataSetName = "DSViewClienteD";
+            this.dSViewClienteD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vClientesDistinguidosBindingSource
+            // 
+            this.vClientesDistinguidosBindingSource.DataMember = "v_ClientesDistinguidos";
+            this.vClientesDistinguidosBindingSource.DataSource = this.dSViewClienteD;
+            // 
+            // v_ClientesDistinguidosTableAdapter
+            // 
+            this.v_ClientesDistinguidosTableAdapter.ClearBeforeFill = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(471, 924);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 16);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Filtrar por:";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Id_Cliente",
+            "Nombre",
+            "Correo",
+            "Calle",
+            "Colonia",
+            "Municipio",
+            "Estado",
+            "Cantidad_Prestamos",
+            "Deuda"});
+            this.comboBox4.Location = new System.Drawing.Point(551, 924);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 21);
+            this.comboBox4.TabIndex = 41;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(53, 925);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(361, 20);
+            this.textBox4.TabIndex = 40;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // dSViewCliente
+            // 
+            this.dSViewCliente.DataSetName = "DSViewCliente";
+            this.dSViewCliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vClientesBindingSource
+            // 
+            this.vClientesBindingSource.DataMember = "v_Clientes";
+            this.vClientesBindingSource.DataSource = this.dSViewCliente;
+            // 
+            // v_ClientesTableAdapter
+            // 
+            this.v_ClientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // idClienteDataGridViewTextBoxColumn1
+            // 
+            this.idClienteDataGridViewTextBoxColumn1.DataPropertyName = "Id_Cliente";
+            this.idClienteDataGridViewTextBoxColumn1.HeaderText = "Id_Cliente";
+            this.idClienteDataGridViewTextBoxColumn1.Name = "idClienteDataGridViewTextBoxColumn1";
+            this.idClienteDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn2
+            // 
+            this.nombreDataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn2.Name = "nombreDataGridViewTextBoxColumn2";
+            this.nombreDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // correoDataGridViewTextBoxColumn1
+            // 
+            this.correoDataGridViewTextBoxColumn1.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn1.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn1.Name = "correoDataGridViewTextBoxColumn1";
+            this.correoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // calleDataGridViewTextBoxColumn1
+            // 
+            this.calleDataGridViewTextBoxColumn1.DataPropertyName = "Calle";
+            this.calleDataGridViewTextBoxColumn1.HeaderText = "Calle";
+            this.calleDataGridViewTextBoxColumn1.Name = "calleDataGridViewTextBoxColumn1";
+            this.calleDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // coloniaDataGridViewTextBoxColumn1
+            // 
+            this.coloniaDataGridViewTextBoxColumn1.DataPropertyName = "Colonia";
+            this.coloniaDataGridViewTextBoxColumn1.HeaderText = "Colonia";
+            this.coloniaDataGridViewTextBoxColumn1.Name = "coloniaDataGridViewTextBoxColumn1";
+            this.coloniaDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // municipioDataGridViewTextBoxColumn1
+            // 
+            this.municipioDataGridViewTextBoxColumn1.DataPropertyName = "Municipio";
+            this.municipioDataGridViewTextBoxColumn1.HeaderText = "Municipio";
+            this.municipioDataGridViewTextBoxColumn1.Name = "municipioDataGridViewTextBoxColumn1";
+            this.municipioDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // estadoDataGridViewTextBoxColumn1
+            // 
+            this.estadoDataGridViewTextBoxColumn1.DataPropertyName = "Estado";
+            this.estadoDataGridViewTextBoxColumn1.HeaderText = "Estado";
+            this.estadoDataGridViewTextBoxColumn1.Name = "estadoDataGridViewTextBoxColumn1";
+            this.estadoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cantidadPrestamosDataGridViewTextBoxColumn
+            // 
+            this.cantidadPrestamosDataGridViewTextBoxColumn.DataPropertyName = "Cantidad_Prestamos";
+            this.cantidadPrestamosDataGridViewTextBoxColumn.HeaderText = "Cantidad_Prestamos";
+            this.cantidadPrestamosDataGridViewTextBoxColumn.Name = "cantidadPrestamosDataGridViewTextBoxColumn";
+            this.cantidadPrestamosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deudaDataGridViewTextBoxColumn
+            // 
+            this.deudaDataGridViewTextBoxColumn.DataPropertyName = "Deuda";
+            this.deudaDataGridViewTextBoxColumn.HeaderText = "Deuda";
+            this.deudaDataGridViewTextBoxColumn.Name = "deudaDataGridViewTextBoxColumn";
+            this.deudaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(722, 389);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(980, 447);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.dataGridView4);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -633,6 +847,13 @@ namespace Bibliotech
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSViewClienteD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vClientesDistinguidosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSViewCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vClientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -697,5 +918,27 @@ namespace Bibliotech
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Button button1;
+        private DSViewClienteD dSViewClienteD;
+        private System.Windows.Forms.BindingSource vClientesDistinguidosBindingSource;
+        private DSViewClienteDTableAdapters.v_ClientesDistinguidosTableAdapter v_ClientesDistinguidosTableAdapter;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox textBox4;
+        private DSViewCliente dSViewCliente;
+        private System.Windows.Forms.BindingSource vClientesBindingSource;
+        private DSViewClienteTableAdapters.v_ClientesTableAdapter v_ClientesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calleDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coloniaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn municipioDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadPrestamosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deudaDataGridViewTextBoxColumn;
     }
 }

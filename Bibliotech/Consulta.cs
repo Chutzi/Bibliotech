@@ -19,6 +19,10 @@ namespace Bibliotech
         Conexion c = new Conexion();
         private void Consulta_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dSViewCliente.v_Clientes' Puede moverla o quitarla según sea necesario.
+            this.v_ClientesTableAdapter.Fill(this.dSViewCliente.v_Clientes);
+            // TODO: esta línea de código carga datos en la tabla 'dSViewClienteD.v_ClientesDistinguidos' Puede moverla o quitarla según sea necesario.
+            this.v_ClientesDistinguidosTableAdapter.Fill(this.dSViewClienteD.v_ClientesDistinguidos);
             // TODO: esta línea de código carga datos en la tabla 'dSViewMultas.v_Multas' Puede moverla o quitarla según sea necesario.
             this.v_MultasTableAdapter.Fill(this.dSViewMultas.v_Multas);
             // TODO: esta línea de código carga datos en la tabla 'dSViewEmpleados.v_Empleados' Puede moverla o quitarla según sea necesario.
@@ -28,6 +32,7 @@ namespace Bibliotech
             comboBox1.Text = "isbn";
             comboBox2.Text = "id_usuario";
             comboBox3.Text = "Id_Cliente";
+            comboBox4.Text = "Id_Cliente";
         }
         private void Filter(DataGridView dataGridView, string query, string tabla)
         {
@@ -88,6 +93,11 @@ namespace Bibliotech
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            Filter(dataGridView4, "select * from v_Clientes where " + comboBox4.Text + " like '%" + textBox4.Text + "%'", "v_Clientes");
         }
     }
 }

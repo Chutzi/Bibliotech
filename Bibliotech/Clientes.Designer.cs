@@ -151,9 +151,9 @@ namespace Bibliotech
             this.comboBox1.DataSource = this.municipiosEstadoBindingSource;
             this.comboBox1.DisplayMember = "Descripcion";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(440, 140);
+            this.comboBox1.Location = new System.Drawing.Point(440, 82);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.Size = new System.Drawing.Size(137, 23);
             this.comboBox1.TabIndex = 25;
             this.comboBox1.ValueMember = "Municipio_id";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -193,6 +193,7 @@ namespace Bibliotech
             // tbEdo
             // 
             this.tbEdo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Estado_id", true));
+            this.tbEdo.Enabled = false;
             this.tbEdo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEdo.Location = new System.Drawing.Point(440, 113);
             this.tbEdo.Name = "tbEdo";
@@ -323,10 +324,11 @@ namespace Bibliotech
             // tbMun
             // 
             this.tbMun.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Municipio_id", true));
+            this.tbMun.Enabled = false;
             this.tbMun.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMun.Location = new System.Drawing.Point(440, 83);
+            this.tbMun.Location = new System.Drawing.Point(414, 83);
             this.tbMun.Name = "tbMun";
-            this.tbMun.Size = new System.Drawing.Size(137, 21);
+            this.tbMun.Size = new System.Drawing.Size(20, 21);
             this.tbMun.TabIndex = 14;
             this.tbMun.TextChanged += new System.EventHandler(this.tbMun_TextChanged);
             // 

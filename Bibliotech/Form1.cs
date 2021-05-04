@@ -37,7 +37,7 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error al cargar\n"+ex, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             labelUser.Text = puesto+": "+name;
@@ -85,6 +85,12 @@ namespace Bibliotech
         private void btConsultas_Click(object sender, EventArgs e)
         {
             AbrirFormHija(new Consulta());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bibliotech\nUbicación: Monterrey, Nuevo León\nHorario: LUN - SAB, 8 am - 8 pm",
+               "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button2_Click(object sender, EventArgs e)

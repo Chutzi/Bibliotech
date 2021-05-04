@@ -138,6 +138,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dataSetPL.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DSViewCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSViewCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSViewClienteD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSViewClienteD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSViewEmpleados.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -338,6 +348,28 @@
     </None>
     <None Include="dataSetPL.xss">
       <DependentUpon>dataSetPL.xsd</DependentUpon>
+    </None>
+    <None Include="DSViewCliente.xsc">
+      <DependentUpon>DSViewCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DSViewCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSViewCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSViewCliente.xss">
+      <DependentUpon>DSViewCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DSViewClienteD.xsc">
+      <DependentUpon>DSViewClienteD.xsd</DependentUpon>
+    </None>
+    <None Include="DSViewClienteD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSViewClienteD.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSViewClienteD.xss">
+      <DependentUpon>DSViewClienteD.xsd</DependentUpon>
     </None>
     <None Include="DSViewEmpleados.xsc">
       <DependentUpon>DSViewEmpleados.xsd</DependentUpon>

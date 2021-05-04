@@ -32,6 +32,8 @@ namespace Bibliotech
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Solicitud));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelMonto = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,7 +61,6 @@ namespace Bibliotech
             this.label9 = new System.Windows.Forms.Label();
             this.tbCant = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +72,7 @@ namespace Bibliotech
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prestamos_LibrosTableAdapter = new Bibliotech.dataSetPLTableAdapters.Prestamos_LibrosTableAdapter();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosLibrosBindingSource)).BeginInit();
@@ -80,6 +82,8 @@ namespace Bibliotech
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -89,7 +93,6 @@ namespace Bibliotech
             this.panel1.Controls.Add(this.buttonCancel);
             this.panel1.Controls.Add(this.buttonEdit);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -98,13 +101,33 @@ namespace Bibliotech
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(53, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(129, 35);
+            this.panel2.TabIndex = 60;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 24);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Solicitud";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.labelMonto);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(556, 287);
+            this.groupBox1.Location = new System.Drawing.Point(621, 319);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(189, 147);
+            this.groupBox1.Size = new System.Drawing.Size(163, 115);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             // 
@@ -132,22 +155,31 @@ namespace Bibliotech
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(597, 240);
+            this.button2.BackColor = System.Drawing.Color.ForestGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(645, 290);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 23);
             this.button2.TabIndex = 56;
             this.button2.Text = "Ver Retrasos";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(454, 240);
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(53, 261);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(83, 23);
             this.button1.TabIndex = 55;
             this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttondelete
@@ -155,11 +187,14 @@ namespace Bibliotech
             this.buttondelete.BackColor = System.Drawing.Color.Red;
             this.buttondelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttondelete.ForeColor = System.Drawing.Color.White;
-            this.buttondelete.Location = new System.Drawing.Point(638, 160);
+            this.buttondelete.Image = ((System.Drawing.Image)(resources.GetObject("buttondelete.Image")));
+            this.buttondelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttondelete.Location = new System.Drawing.Point(638, 177);
             this.buttondelete.Name = "buttondelete";
             this.buttondelete.Size = new System.Drawing.Size(78, 23);
             this.buttondelete.TabIndex = 54;
             this.buttondelete.Text = "Eliminar";
+            this.buttondelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttondelete.UseVisualStyleBackColor = false;
             this.buttondelete.Click += new System.EventHandler(this.buttondelete_Click);
             // 
@@ -168,11 +203,14 @@ namespace Bibliotech
             this.buttonSave.BackColor = System.Drawing.Color.SeaGreen;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.ForeColor = System.Drawing.Color.White;
-            this.buttonSave.Location = new System.Drawing.Point(638, 73);
+            this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
+            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSave.Location = new System.Drawing.Point(638, 90);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(78, 23);
             this.buttonSave.TabIndex = 53;
             this.buttonSave.Text = "Guardar";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
@@ -182,11 +220,14 @@ namespace Bibliotech
             this.buttonNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonNew.Location = new System.Drawing.Point(638, 44);
+            this.buttonNew.Image = ((System.Drawing.Image)(resources.GetObject("buttonNew.Image")));
+            this.buttonNew.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonNew.Location = new System.Drawing.Point(638, 61);
             this.buttonNew.Name = "buttonNew";
             this.buttonNew.Size = new System.Drawing.Size(78, 23);
             this.buttonNew.TabIndex = 50;
             this.buttonNew.Text = "Nuevo";
+            this.buttonNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNew.UseVisualStyleBackColor = false;
             this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
@@ -195,11 +236,14 @@ namespace Bibliotech
             this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.ForeColor = System.Drawing.Color.White;
-            this.buttonCancel.Location = new System.Drawing.Point(638, 102);
+            this.buttonCancel.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancel.Image")));
+            this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCancel.Location = new System.Drawing.Point(638, 119);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(78, 23);
             this.buttonCancel.TabIndex = 52;
             this.buttonCancel.Text = "Cancelar";
+            this.buttonCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -208,16 +252,20 @@ namespace Bibliotech
             this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
-            this.buttonEdit.Location = new System.Drawing.Point(638, 131);
+            this.buttonEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit.Image")));
+            this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEdit.Location = new System.Drawing.Point(638, 148);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(78, 23);
             this.buttonEdit.TabIndex = 51;
             this.buttonEdit.Text = "Editar";
+            this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.dateEntrega);
             this.groupBox2.Controls.Add(this.dateInicio);
             this.groupBox2.Controls.Add(this.label3);
@@ -235,7 +283,7 @@ namespace Bibliotech
             this.groupBox2.Enabled = false;
             this.groupBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.groupBox2.Location = new System.Drawing.Point(53, 31);
+            this.groupBox2.Location = new System.Drawing.Point(53, 53);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(568, 192);
             this.groupBox2.TabIndex = 49;
@@ -290,16 +338,17 @@ namespace Bibliotech
             this.checkBox1.TabIndex = 55;
             this.checkBox1.Text = "Aplica Multa";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // tbMonto
             // 
-            this.tbMonto.Enabled = false;
             this.tbMonto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMonto.Location = new System.Drawing.Point(135, 158);
             this.tbMonto.Name = "tbMonto";
             this.tbMonto.Size = new System.Drawing.Size(82, 21);
             this.tbMonto.TabIndex = 52;
+            this.tbMonto.Visible = false;
             // 
             // tbDias
             // 
@@ -319,6 +368,7 @@ namespace Bibliotech
             this.label2.Size = new System.Drawing.Size(42, 14);
             this.label2.TabIndex = 51;
             this.label2.Text = "Monto";
+            this.label2.Visible = false;
             // 
             // tbISBN
             // 
@@ -391,16 +441,6 @@ namespace Bibliotech
             this.labelNombre.TabIndex = 4;
             this.labelNombre.Text = "ISBN Libro";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(49, 237);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 24);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "Solicitud";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -416,9 +456,9 @@ namespace Bibliotech
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.dataGridView1.DataSource = this.prestamosLibrosBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(53, 280);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 290);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(476, 175);
+            this.dataGridView1.Size = new System.Drawing.Size(541, 175);
             this.dataGridView1.TabIndex = 47;
             // 
             // dataGridViewTextBoxColumn1
@@ -484,7 +524,8 @@ namespace Bibliotech
             this.Text = "Solicitud de Préstamo";
             this.Load += new System.EventHandler(this.Solicitud_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -537,5 +578,6 @@ namespace Bibliotech
         private System.Windows.Forms.Label labelMonto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

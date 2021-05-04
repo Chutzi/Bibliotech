@@ -72,11 +72,6 @@ namespace Bibliotech
             Application.Exit();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Acceso_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'bibliotechDataSet8.Municipios_Estado' Puede moverla o quitarla según sea necesario.
@@ -86,19 +81,9 @@ namespace Bibliotech
             toolTip1.SetToolTip(button1, "Inicia Sesión");
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -118,6 +103,12 @@ namespace Bibliotech
         {
             MessageBox.Show("El registro de un nuevo empleado se lleva a cabo en el modulo de seguridad, espere a que sea incorporado correctamente, si no ha sido registrado acuda personalmente con el administrador para darlo de alta\n¡Gracias!", 
                 "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bibliotech\nUbicación: Monterrey, Nuevo León\nHorario: LUN - SAB, 8 am - 8 pm",
+                              "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

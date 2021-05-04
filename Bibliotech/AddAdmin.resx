@@ -123,6 +123,16 @@
   <metadata name="bibliotechDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>224, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxMAAAsTAQCanBgAAACiSURBVEhLtc1bCgIxEETR+XA7
+        Lkd8bcbNuEsh9gUDmbbUJFMGzsdcsXoppfyVjE4yOsnoJKOTjBvsc1t9bHQNj3Brmu1AHefZD3wcx+pj
+        wtdxvIUBP8chY4euceSwC/dwbFrWPY4cDoHHwCnk34fGoSJ/5DF0DrUPj0PG0B65hKlxyPjSHpkah4yN
+        eoQ3PA4ZE4anxiGjk4xOMjrJ6CSjT1meOIPnapkly0UAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="operacionesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>339, 56</value>
   </metadata>
@@ -135,9 +145,27 @@
   <metadata name="moduloTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxMAAAsTAQCanBgAAACiSURBVEhLtc1bCgIxEETR+XA7
+        Lkd8bcbNuEsh9gUDmbbUJFMGzsdcsXoppfyVjE4yOsnoJKOTjBvsc1t9bHQNj3Brmu1AHefZD3wcx+pj
+        wtdxvIUBP8chY4euceSwC/dwbFrWPY4cDoHHwCnk34fGoSJ/5DF0DrUPj0PG0B65hKlxyPjSHpkah4yN
+        eoQ3PA4ZE4anxiGjk4xOMjrJ6CSjT1meOIPnapkly0UAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="operacionesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>536, 56</value>
   </metadata>
+  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxMAAAsTAQCanBgAAACiSURBVEhLtc1bCgIxEETR+XA7
+        Lkd8bcbNuEsh9gUDmbbUJFMGzsdcsXoppfyVjE4yOsnoJKOTjBvsc1t9bHQNj3Brmu1AHefZD3wcx+pj
+        wtdxvIUBP8chY4euceSwC/dwbFrWPY4cDoHHwCnk34fGoSJ/5DF0DrUPj0PG0B65hKlxyPjSHpkah4yN
+        eoQ3PA4ZE4anxiGjk4xOMjrJ6CSjT1meOIPnapkly0UAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="rol_OperacionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -156,6 +184,15 @@
   <metadata name="rol_OperacionTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 134</value>
   </metadata>
+  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxMAAAsTAQCanBgAAACiSURBVEhLtc1bCgIxEETR+XA7
+        Lkd8bcbNuEsh9gUDmbbUJFMGzsdcsXoppfyVjE4yOsnoJKOTjBvsc1t9bHQNj3Brmu1AHefZD3wcx+pj
+        wtdxvIUBP8chY4euceSwC/dwbFrWPY4cDoHHwCnk34fGoSJ/5DF0DrUPj0PG0B65hKlxyPjSHpkah4yN
+        eoQ3PA4ZE4anxiGjk4xOMjrJ6CSjT1meOIPnapkly0UAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="Id_Usuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -192,7 +229,6 @@
   <metadata name="usuariosTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>354, 173</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bDeleteuser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
