@@ -32,6 +32,9 @@ namespace Bibliotech
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prestamos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSC_P = new Bibliotech.DSC_P();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,14 +56,22 @@ namespace Bibliotech
             this.Id_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.librosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetLibros = new Bibliotech.DataSetLibros();
             this.prestamosTableAdapter = new Bibliotech.BibliotechDataSet7TableAdapters.PrestamosTableAdapter();
+            this.librosTableAdapter = new Bibliotech.DataSetLibrosTableAdapters.LibrosTableAdapter();
+            this.clienteTableAdapter = new Bibliotech.DSC_PTableAdapters.ClienteTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSC_P)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetLibros)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,6 +93,28 @@ namespace Bibliotech
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(997, 389);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.clienteBindingSource;
+            this.comboBox1.DisplayMember = "Nombre";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(146, 60);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(137, 23);
+            this.comboBox1.TabIndex = 49;
+            this.comboBox1.ValueMember = "Id_Cliente";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.dSC_P;
+            // 
+            // dSC_P
+            // 
+            this.dSC_P.DataSetName = "DSC_P";
+            this.dSC_P.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pictureBox3
             // 
@@ -215,6 +248,7 @@ namespace Bibliotech
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.tbIdPresta);
             this.groupBox2.Controls.Add(this.button2);
@@ -280,11 +314,13 @@ namespace Bibliotech
             // tbIdCliente
             // 
             this.tbIdCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prestamosBindingSource1, "Id_Cliente", true));
+            this.tbIdCliente.Enabled = false;
             this.tbIdCliente.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIdCliente.Location = new System.Drawing.Point(146, 60);
+            this.tbIdCliente.Location = new System.Drawing.Point(94, 60);
             this.tbIdCliente.Name = "tbIdCliente";
-            this.tbIdCliente.Size = new System.Drawing.Size(137, 21);
+            this.tbIdCliente.Size = new System.Drawing.Size(44, 21);
             this.tbIdCliente.TabIndex = 21;
+            this.tbIdCliente.TextChanged += new System.EventHandler(this.tbIdCliente_TextChanged);
             // 
             // label7
             // 
@@ -331,9 +367,27 @@ namespace Bibliotech
             this.idClienteDataGridViewTextBoxColumn.HeaderText = "Id_Cliente";
             this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
             // 
+            // librosBindingSource
+            // 
+            this.librosBindingSource.DataMember = "Libros";
+            this.librosBindingSource.DataSource = this.dataSetLibros;
+            // 
+            // dataSetLibros
+            // 
+            this.dataSetLibros.DataSetName = "DataSetLibros";
+            this.dataSetLibros.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // prestamosTableAdapter
             // 
             this.prestamosTableAdapter.ClearBeforeFill = true;
+            // 
+            // librosTableAdapter
+            // 
+            this.librosTableAdapter.ClearBeforeFill = true;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
             // 
             // Prestamos
             // 
@@ -346,6 +400,8 @@ namespace Bibliotech
             this.Text = "Prestamos";
             this.Load += new System.EventHandler(this.Prestamos_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSC_P)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -354,6 +410,8 @@ namespace Bibliotech
             ((System.ComponentModel.ISupportInitialize)(this.prestamosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotechDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetLibros)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -385,5 +443,12 @@ namespace Bibliotech
         private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private DataSetLibros dataSetLibros;
+        private System.Windows.Forms.BindingSource librosBindingSource;
+        private DataSetLibrosTableAdapters.LibrosTableAdapter librosTableAdapter;
+        private DSC_P dSC_P;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+        private DSC_PTableAdapters.ClienteTableAdapter clienteTableAdapter;
     }
 }

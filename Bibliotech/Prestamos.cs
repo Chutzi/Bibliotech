@@ -37,11 +37,16 @@ namespace Bibliotech
 
         private void Prestamos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dSC_P.Cliente' Puede moverla o quitarla según sea necesario.
+            this.clienteTableAdapter.Fill(this.dSC_P.Cliente);
+            // TODO: esta línea de código carga datos en la tabla 'dataSetLibros.Libros' Puede moverla o quitarla según sea necesario.
+            this.librosTableAdapter.Fill(this.dataSetLibros.Libros);
             // TODO: esta línea de código carga datos en la tabla 'bibliotechDataSet7.Prestamos' Puede moverla o quitarla según sea necesario.
             this.prestamosTableAdapter.Fill(this.bibliotechDataSet7.Prestamos);
             // TODO: esta línea de código carga datos en la tabla 'dataSetPresta.Prestamos' Puede moverla o quitarla según sea necesario.
 
             prestamosBindingSource1.DataSource = bibliotechDataSet7.Prestamos;
+            tbIdCliente.Text = comboBox1.SelectedValue.ToString();
         }
 
         private void buttonNew_Click(object sender, EventArgs e)
@@ -49,7 +54,7 @@ namespace Bibliotech
             try
             {
                 groupBox2.Enabled = true;
-                tbIdCliente.Text = "";
+                tbIdCliente.Text = "1";
                 tbIdPresta.Text = "";
                 bibliotechDataSet7.Prestamos.AddPrestamosRow(1);
                 prestamosBindingSource1.MoveLast();
@@ -69,6 +74,7 @@ namespace Bibliotech
                 prestamosBindingSource1.EndEdit();
                 prestamosTableAdapter.Update(bibliotechDataSet7.Prestamos);
                 groupBox2.Enabled = false;
+                MessageBox.Show("¡Guardado con exito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -85,18 +91,46 @@ namespace Bibliotech
 
         private void buttondelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Estas seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                prestamosBindingSource1.RemoveCurrent();
-                prestamosTableAdapter.Update(this.bibliotechDataSet7.Prestamos);
+                if (MessageBox.Show("Estas seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    prestamosBindingSource1.RemoveCurrent();
+                    prestamosTableAdapter.Update(this.bibliotechDataSet7.Prestamos);
+                }
+                //else
+                this.prestamosTableAdapter.Fill(this.bibliotechDataSet7.Prestamos);
             }
-            //else
-            this.prestamosTableAdapter.Fill(this.bibliotechDataSet7.Prestamos);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbIdCliente.Text = comboBox1.SelectedValue.ToString();
+        }
+
+        private void tbIdCliente_TextChanged(object sender, EventArgs e)
+        {
+            comboBox1.SelectedValue = tbIdCliente.Text;
+        }
+
+        //private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    tbIdPresta.Text = comboBox1.SelectedValue.ToString();
+        //}
+
+        //private void tbIdPresta_TextChanged(object sender, EventArgs e)
+        //{
+        //    comboBox1.SelectedValue = tbIdPresta.Text;
+        //}
     }
 }

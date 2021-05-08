@@ -32,7 +32,6 @@ namespace Bibliotech
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.municipiosEstadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -89,7 +88,6 @@ namespace Bibliotech
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.bDeleteuser);
             this.panel1.Controls.Add(this.bSaveuser);
@@ -105,19 +103,6 @@ namespace Bibliotech
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(669, 554);
             this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(594, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -600,6 +585,5 @@ namespace Bibliotech
         private BibliotechDataSet8 bibliotechDataSet8;
         private System.Windows.Forms.BindingSource municipiosEstadoBindingSource;
         private BibliotechDataSet8TableAdapters.Municipios_EstadoTableAdapter municipios_EstadoTableAdapter;
-        private System.Windows.Forms.Button button1;
     }
 }

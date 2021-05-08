@@ -429,10 +429,10 @@ namespace Bibliotech {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Prestamos_LibrosRow AddPrestamos_LibrosRow(int Id_Prestamo, string ISBN, short Cantidad, System.DateTime Fecha_Creacion, System.DateTime Fecha_Entrega, string Aplica_Multa, decimal Monto) {
+            public Prestamos_LibrosRow AddPrestamos_LibrosRow(int Id, int Id_Prestamo, string ISBN, short Cantidad, System.DateTime Fecha_Creacion, System.DateTime Fecha_Entrega, string Aplica_Multa, decimal Monto) {
                 Prestamos_LibrosRow rowPrestamos_LibrosRow = ((Prestamos_LibrosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        Id,
                         Id_Prestamo,
                         ISBN,
                         Cantidad,
@@ -500,7 +500,6 @@ namespace Bibliotech {
                 base.Columns.Add(this.columnMonto);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
-                this.columnId.AutoIncrement = true;
                 this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;

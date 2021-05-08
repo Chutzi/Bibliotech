@@ -59,6 +59,11 @@
     <Compile Include="AddAdmin.Designer.cs">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Almacen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Almacen.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +80,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BibliotechDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotechDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet13.xsd</DependentUpon>
     </Compile>
     <Compile Include="BibliotechDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -111,6 +136,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BibliotechDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BibliotechDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotechDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +167,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dataSetPL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSC_P.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSC_P.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSgen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSgen.xsd</DependentUpon>
     </Compile>
     <Compile Include="DSViewCliente.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -217,6 +257,17 @@
     <EmbeddedResource Include="Solicitud.resx">
       <DependentUpon>Solicitud.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Almacen.xsc">
+      <DependentUpon>Almacen.xsd</DependentUpon>
+    </None>
+    <None Include="Almacen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Almacen.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Almacen.xss">
+      <DependentUpon>Almacen.xsd</DependentUpon>
+    </None>
     <None Include="BibliotechDataSet.xsc">
       <DependentUpon>BibliotechDataSet.xsd</DependentUpon>
     </None>
@@ -238,6 +289,50 @@
     </None>
     <None Include="BibliotechDataSet1.xss">
       <DependentUpon>BibliotechDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet10.xsc">
+      <DependentUpon>BibliotechDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet10.xss">
+      <DependentUpon>BibliotechDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet11.xsc">
+      <DependentUpon>BibliotechDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet11.xss">
+      <DependentUpon>BibliotechDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet12.xsc">
+      <DependentUpon>BibliotechDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet12.xss">
+      <DependentUpon>BibliotechDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet13.xsc">
+      <DependentUpon>BibliotechDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet13.xss">
+      <DependentUpon>BibliotechDataSet13.xsd</DependentUpon>
     </None>
     <None Include="BibliotechDataSet2.xsc">
       <DependentUpon>BibliotechDataSet2.xsd</DependentUpon>
@@ -316,6 +411,17 @@
     <None Include="BibliotechDataSet8.xss">
       <DependentUpon>BibliotechDataSet8.xsd</DependentUpon>
     </None>
+    <None Include="BibliotechDataSet9.xsc">
+      <DependentUpon>BibliotechDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotechDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotechDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotechDataSet9.xss">
+      <DependentUpon>BibliotechDataSet9.xsd</DependentUpon>
+    </None>
     <None Include="DataSetEditorial.xsc">
       <DependentUpon>DataSetEditorial.xsd</DependentUpon>
     </None>
@@ -348,6 +454,28 @@
     </None>
     <None Include="dataSetPL.xss">
       <DependentUpon>dataSetPL.xsd</DependentUpon>
+    </None>
+    <None Include="DSC_P.xsc">
+      <DependentUpon>DSC_P.xsd</DependentUpon>
+    </None>
+    <None Include="DSC_P.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSC_P.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSC_P.xss">
+      <DependentUpon>DSC_P.xsd</DependentUpon>
+    </None>
+    <None Include="DSgen.xsc">
+      <DependentUpon>DSgen.xsd</DependentUpon>
+    </None>
+    <None Include="DSgen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSgen.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSgen.xss">
+      <DependentUpon>DSgen.xsd</DependentUpon>
     </None>
     <None Include="DSViewCliente.xsc">
       <DependentUpon>DSViewCliente.xsd</DependentUpon>

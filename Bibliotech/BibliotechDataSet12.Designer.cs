@@ -20,17 +20,17 @@ namespace Bibliotech {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSetLibros")]
+    [global::System.Xml.Serialization.XmlRootAttribute("BibliotechDataSet12")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSetLibros : global::System.Data.DataSet {
+    public partial class BibliotechDataSet12 : global::System.Data.DataSet {
         
-        private LibrosDataTable tableLibros;
+        private EditorialDataTable tableEditorial;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DataSetLibros() {
+        public BibliotechDataSet12() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Bibliotech {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected DataSetLibros(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected BibliotechDataSet12(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Bibliotech {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Libros"] != null)) {
-                    base.Tables.Add(new LibrosDataTable(ds.Tables["Libros"]));
+                if ((ds.Tables["Editorial"] != null)) {
+                    base.Tables.Add(new EditorialDataTable(ds.Tables["Editorial"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Bibliotech {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public LibrosDataTable Libros {
+        public EditorialDataTable Editorial {
             get {
-                return this.tableLibros;
+                return this.tableEditorial;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Bibliotech {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSetLibros cln = ((DataSetLibros)(base.Clone()));
+            BibliotechDataSet12 cln = ((BibliotechDataSet12)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Bibliotech {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Libros"] != null)) {
-                    base.Tables.Add(new LibrosDataTable(ds.Tables["Libros"]));
+                if ((ds.Tables["Editorial"] != null)) {
+                    base.Tables.Add(new EditorialDataTable(ds.Tables["Editorial"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Bibliotech {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableLibros = ((LibrosDataTable)(base.Tables["Libros"]));
+            this.tableEditorial = ((EditorialDataTable)(base.Tables["Editorial"]));
             if ((initTable == true)) {
-                if ((this.tableLibros != null)) {
-                    this.tableLibros.InitVars();
+                if ((this.tableEditorial != null)) {
+                    this.tableEditorial.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Bibliotech {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSetLibros";
+            this.DataSetName = "BibliotechDataSet12";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSetLibros.xsd";
+            this.Namespace = "http://tempuri.org/BibliotechDataSet12.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableLibros = new LibrosDataTable();
-            base.Tables.Add(this.tableLibros);
+            this.tableEditorial = new EditorialDataTable();
+            base.Tables.Add(this.tableEditorial);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeLibros() {
+        private bool ShouldSerializeEditorial() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Bibliotech {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSetLibros ds = new DataSetLibros();
+            BibliotechDataSet12 ds = new BibliotechDataSet12();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,37 +270,27 @@ namespace Bibliotech {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void LibrosRowChangeEventHandler(object sender, LibrosRowChangeEvent e);
+        public delegate void EditorialRowChangeEventHandler(object sender, EditorialRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class LibrosDataTable : global::System.Data.TypedTableBase<LibrosRow> {
-            
-            private global::System.Data.DataColumn columnISBN;
-            
-            private global::System.Data.DataColumn columnTitulo;
-            
-            private global::System.Data.DataColumn columnEdicion;
-            
-            private global::System.Data.DataColumn columnFecha_Creacion;
-            
-            private global::System.Data.DataColumn columnPaginas;
-            
-            private global::System.Data.DataColumn columnDescripcion;
-            
-            private global::System.Data.DataColumn columnId_Autor;
+        public partial class EditorialDataTable : global::System.Data.TypedTableBase<EditorialRow> {
             
             private global::System.Data.DataColumn columnId_Editorial;
             
-            private global::System.Data.DataColumn columnId_genero;
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnTelefono;
+            
+            private global::System.Data.DataColumn columnCorreo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LibrosDataTable() {
-                this.TableName = "Libros";
+            public EditorialDataTable() {
+                this.TableName = "Editorial";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -308,7 +298,7 @@ namespace Bibliotech {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal LibrosDataTable(global::System.Data.DataTable table) {
+            internal EditorialDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -325,65 +315,9 @@ namespace Bibliotech {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected LibrosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected EditorialDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ISBNColumn {
-                get {
-                    return this.columnISBN;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TituloColumn {
-                get {
-                    return this.columnTitulo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EdicionColumn {
-                get {
-                    return this.columnEdicion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Fecha_CreacionColumn {
-                get {
-                    return this.columnFecha_Creacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PaginasColumn {
-                get {
-                    return this.columnPaginas;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DescripcionColumn {
-                get {
-                    return this.columnDescripcion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Id_AutorColumn {
-                get {
-                    return this.columnId_Autor;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -396,9 +330,25 @@ namespace Bibliotech {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Id_generoColumn {
+            public global::System.Data.DataColumn NombreColumn {
                 get {
-                    return this.columnId_genero;
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TelefonoColumn {
+                get {
+                    return this.columnTelefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CorreoColumn {
+                get {
+                    return this.columnCorreo;
                 }
             }
             
@@ -413,60 +363,55 @@ namespace Bibliotech {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LibrosRow this[int index] {
+            public EditorialRow this[int index] {
                 get {
-                    return ((LibrosRow)(this.Rows[index]));
+                    return ((EditorialRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event LibrosRowChangeEventHandler LibrosRowChanging;
+            public event EditorialRowChangeEventHandler EditorialRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event LibrosRowChangeEventHandler LibrosRowChanged;
+            public event EditorialRowChangeEventHandler EditorialRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event LibrosRowChangeEventHandler LibrosRowDeleting;
+            public event EditorialRowChangeEventHandler EditorialRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event LibrosRowChangeEventHandler LibrosRowDeleted;
+            public event EditorialRowChangeEventHandler EditorialRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddLibrosRow(LibrosRow row) {
+            public void AddEditorialRow(EditorialRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LibrosRow AddLibrosRow(string ISBN, string Titulo, byte Edicion, System.DateTime Fecha_Creacion, short Paginas, string Descripcion, short Id_Autor, short Id_Editorial, short Id_genero) {
-                LibrosRow rowLibrosRow = ((LibrosRow)(this.NewRow()));
+            public EditorialRow AddEditorialRow(short Id_Editorial, string Nombre, string Telefono, string Correo) {
+                EditorialRow rowEditorialRow = ((EditorialRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ISBN,
-                        Titulo,
-                        Edicion,
-                        Fecha_Creacion,
-                        Paginas,
-                        Descripcion,
-                        Id_Autor,
                         Id_Editorial,
-                        Id_genero};
-                rowLibrosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowLibrosRow);
-                return rowLibrosRow;
+                        Nombre,
+                        Telefono,
+                        Correo};
+                rowEditorialRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowEditorialRow);
+                return rowEditorialRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LibrosRow FindByISBN(string ISBN) {
-                return ((LibrosRow)(this.Rows.Find(new object[] {
-                            ISBN})));
+            public EditorialRow FindById_Editorial(short Id_Editorial) {
+                return ((EditorialRow)(this.Rows.Find(new object[] {
+                            Id_Editorial})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                LibrosDataTable cln = ((LibrosDataTable)(base.Clone()));
+                EditorialDataTable cln = ((EditorialDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -474,84 +419,65 @@ namespace Bibliotech {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new LibrosDataTable();
+                return new EditorialDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnISBN = base.Columns["ISBN"];
-                this.columnTitulo = base.Columns["Titulo"];
-                this.columnEdicion = base.Columns["Edicion"];
-                this.columnFecha_Creacion = base.Columns["Fecha_Creacion"];
-                this.columnPaginas = base.Columns["Paginas"];
-                this.columnDescripcion = base.Columns["Descripcion"];
-                this.columnId_Autor = base.Columns["Id_Autor"];
                 this.columnId_Editorial = base.Columns["Id_Editorial"];
-                this.columnId_genero = base.Columns["Id_genero"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnTelefono = base.Columns["Telefono"];
+                this.columnCorreo = base.Columns["Correo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnISBN = new global::System.Data.DataColumn("ISBN", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnISBN);
-                this.columnTitulo = new global::System.Data.DataColumn("Titulo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTitulo);
-                this.columnEdicion = new global::System.Data.DataColumn("Edicion", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEdicion);
-                this.columnFecha_Creacion = new global::System.Data.DataColumn("Fecha_Creacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha_Creacion);
-                this.columnPaginas = new global::System.Data.DataColumn("Paginas", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPaginas);
-                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescripcion);
-                this.columnId_Autor = new global::System.Data.DataColumn("Id_Autor", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_Autor);
                 this.columnId_Editorial = new global::System.Data.DataColumn("Id_Editorial", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId_Editorial);
-                this.columnId_genero = new global::System.Data.DataColumn("Id_genero", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_genero);
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnTelefono = new global::System.Data.DataColumn("Telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefono);
+                this.columnCorreo = new global::System.Data.DataColumn("Correo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCorreo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnISBN}, true));
-                this.columnISBN.AllowDBNull = false;
-                this.columnISBN.Unique = true;
-                this.columnISBN.MaxLength = 13;
-                this.columnTitulo.AllowDBNull = false;
-                this.columnTitulo.MaxLength = 60;
-                this.columnEdicion.AllowDBNull = false;
-                this.columnFecha_Creacion.AllowDBNull = false;
-                this.columnPaginas.AllowDBNull = false;
-                this.columnDescripcion.AllowDBNull = false;
-                this.columnDescripcion.MaxLength = 80;
-                this.columnId_Autor.AllowDBNull = false;
+                                this.columnId_Editorial}, true));
                 this.columnId_Editorial.AllowDBNull = false;
+                this.columnId_Editorial.Unique = true;
+                this.columnNombre.AllowDBNull = false;
+                this.columnNombre.MaxLength = 60;
+                this.columnTelefono.AllowDBNull = false;
+                this.columnTelefono.MaxLength = 13;
+                this.columnCorreo.AllowDBNull = false;
+                this.columnCorreo.MaxLength = 60;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LibrosRow NewLibrosRow() {
-                return ((LibrosRow)(this.NewRow()));
+            public EditorialRow NewEditorialRow() {
+                return ((EditorialRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new LibrosRow(builder);
+                return new EditorialRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(LibrosRow);
+                return typeof(EditorialRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.LibrosRowChanged != null)) {
-                    this.LibrosRowChanged(this, new LibrosRowChangeEvent(((LibrosRow)(e.Row)), e.Action));
+                if ((this.EditorialRowChanged != null)) {
+                    this.EditorialRowChanged(this, new EditorialRowChangeEvent(((EditorialRow)(e.Row)), e.Action));
                 }
             }
             
@@ -559,8 +485,8 @@ namespace Bibliotech {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.LibrosRowChanging != null)) {
-                    this.LibrosRowChanging(this, new LibrosRowChangeEvent(((LibrosRow)(e.Row)), e.Action));
+                if ((this.EditorialRowChanging != null)) {
+                    this.EditorialRowChanging(this, new EditorialRowChangeEvent(((EditorialRow)(e.Row)), e.Action));
                 }
             }
             
@@ -568,8 +494,8 @@ namespace Bibliotech {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.LibrosRowDeleted != null)) {
-                    this.LibrosRowDeleted(this, new LibrosRowChangeEvent(((LibrosRow)(e.Row)), e.Action));
+                if ((this.EditorialRowDeleted != null)) {
+                    this.EditorialRowDeleted(this, new EditorialRowChangeEvent(((EditorialRow)(e.Row)), e.Action));
                 }
             }
             
@@ -577,14 +503,14 @@ namespace Bibliotech {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.LibrosRowDeleting != null)) {
-                    this.LibrosRowDeleting(this, new LibrosRowChangeEvent(((LibrosRow)(e.Row)), e.Action));
+                if ((this.EditorialRowDeleting != null)) {
+                    this.EditorialRowDeleting(this, new EditorialRowChangeEvent(((EditorialRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveLibrosRow(LibrosRow row) {
+            public void RemoveEditorialRow(EditorialRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -593,7 +519,7 @@ namespace Bibliotech {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetLibros ds = new DataSetLibros();
+                BibliotechDataSet12 ds = new BibliotechDataSet12();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -611,7 +537,7 @@ namespace Bibliotech {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "LibrosDataTable";
+                attribute2.FixedValue = "EditorialDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -655,131 +581,59 @@ namespace Bibliotech {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class LibrosRow : global::System.Data.DataRow {
+        public partial class EditorialRow : global::System.Data.DataRow {
             
-            private LibrosDataTable tableLibros;
+            private EditorialDataTable tableEditorial;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal LibrosRow(global::System.Data.DataRowBuilder rb) : 
+            internal EditorialRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableLibros = ((LibrosDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ISBN {
-                get {
-                    return ((string)(this[this.tableLibros.ISBNColumn]));
-                }
-                set {
-                    this[this.tableLibros.ISBNColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Titulo {
-                get {
-                    return ((string)(this[this.tableLibros.TituloColumn]));
-                }
-                set {
-                    this[this.tableLibros.TituloColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public byte Edicion {
-                get {
-                    return ((byte)(this[this.tableLibros.EdicionColumn]));
-                }
-                set {
-                    this[this.tableLibros.EdicionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Fecha_Creacion {
-                get {
-                    return ((global::System.DateTime)(this[this.tableLibros.Fecha_CreacionColumn]));
-                }
-                set {
-                    this[this.tableLibros.Fecha_CreacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short Paginas {
-                get {
-                    return ((short)(this[this.tableLibros.PaginasColumn]));
-                }
-                set {
-                    this[this.tableLibros.PaginasColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Descripcion {
-                get {
-                    return ((string)(this[this.tableLibros.DescripcionColumn]));
-                }
-                set {
-                    this[this.tableLibros.DescripcionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short Id_Autor {
-                get {
-                    return ((short)(this[this.tableLibros.Id_AutorColumn]));
-                }
-                set {
-                    this[this.tableLibros.Id_AutorColumn] = value;
-                }
+                this.tableEditorial = ((EditorialDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public short Id_Editorial {
                 get {
-                    return ((short)(this[this.tableLibros.Id_EditorialColumn]));
+                    return ((short)(this[this.tableEditorial.Id_EditorialColumn]));
                 }
                 set {
-                    this[this.tableLibros.Id_EditorialColumn] = value;
+                    this[this.tableEditorial.Id_EditorialColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short Id_genero {
+            public string Nombre {
                 get {
-                    try {
-                        return ((short)(this[this.tableLibros.Id_generoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Id_genero\' de la tabla \'Libros\' es DBNull.", e);
-                    }
+                    return ((string)(this[this.tableEditorial.NombreColumn]));
                 }
                 set {
-                    this[this.tableLibros.Id_generoColumn] = value;
+                    this[this.tableEditorial.NombreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsId_generoNull() {
-                return this.IsNull(this.tableLibros.Id_generoColumn);
+            public string Telefono {
+                get {
+                    return ((string)(this[this.tableEditorial.TelefonoColumn]));
+                }
+                set {
+                    this[this.tableEditorial.TelefonoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetId_generoNull() {
-                this[this.tableLibros.Id_generoColumn] = global::System.Convert.DBNull;
+            public string Correo {
+                get {
+                    return ((string)(this[this.tableEditorial.CorreoColumn]));
+                }
+                set {
+                    this[this.tableEditorial.CorreoColumn] = value;
+                }
             }
         }
         
@@ -787,22 +641,22 @@ namespace Bibliotech {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class LibrosRowChangeEvent : global::System.EventArgs {
+        public class EditorialRowChangeEvent : global::System.EventArgs {
             
-            private LibrosRow eventRow;
+            private EditorialRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LibrosRowChangeEvent(LibrosRow row, global::System.Data.DataRowAction action) {
+            public EditorialRowChangeEvent(EditorialRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LibrosRow Row {
+            public EditorialRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -818,7 +672,7 @@ namespace Bibliotech {
         }
     }
 }
-namespace Bibliotech.DataSetLibrosTableAdapters {
+namespace Bibliotech.BibliotechDataSet12TableAdapters {
     
     
     /// <summary>
@@ -830,7 +684,7 @@ namespace Bibliotech.DataSetLibrosTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class LibrosTableAdapter : global::System.ComponentModel.Component {
+    public partial class EditorialTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -844,7 +698,7 @@ namespace Bibliotech.DataSetLibrosTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public LibrosTableAdapter() {
+        public EditorialTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -941,69 +795,45 @@ namespace Bibliotech.DataSetLibrosTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Libros";
-            tableMapping.ColumnMappings.Add("ISBN", "ISBN");
-            tableMapping.ColumnMappings.Add("Titulo", "Titulo");
-            tableMapping.ColumnMappings.Add("Edicion", "Edicion");
-            tableMapping.ColumnMappings.Add("Fecha_Creacion", "Fecha_Creacion");
-            tableMapping.ColumnMappings.Add("Paginas", "Paginas");
-            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
-            tableMapping.ColumnMappings.Add("Id_Autor", "Id_Autor");
+            tableMapping.DataSetTable = "Editorial";
             tableMapping.ColumnMappings.Add("Id_Editorial", "Id_Editorial");
-            tableMapping.ColumnMappings.Add("Id_genero", "Id_genero");
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Telefono", "Telefono");
+            tableMapping.ColumnMappings.Add("Correo", "Correo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Libros] WHERE (([ISBN] = @Original_ISBN) AND ([Titulo] = @Original_Titulo) AND ([Edicion] = @Original_Edicion) AND ([Fecha_Creacion] = @Original_Fecha_Creacion) AND ([Paginas] = @Original_Paginas) AND ([Descripcion] = @Original_Descripcion) AND ([Id_Autor] = @Original_Id_Autor) AND ([Id_Editorial] = @Original_Id_Editorial) AND ((@IsNull_Id_genero = 1 AND [Id_genero] IS NULL) OR ([Id_genero] = @Original_Id_genero)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Editorial] WHERE (([Id_Editorial] = @Original_Id_Editorial) AN" +
+                "D ([Nombre] = @Original_Nombre) AND ([Telefono] = @Original_Telefono) AND ([Corr" +
+                "eo] = @Original_Correo))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ISBN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ISBN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titulo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Edicion", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Edicion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha_Creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Creacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Paginas", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Paginas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Autor", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Autor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Editorial", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Editorial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Id_genero", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_genero", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_genero", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_genero", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Libros] ([ISBN], [Titulo], [Edicion], [Fecha_Creacion], [Paginas], [Descripcion], [Id_Autor], [Id_Editorial], [Id_genero]) VALUES (@ISBN, @Titulo, @Edicion, @Fecha_Creacion, @Paginas, @Descripcion, @Id_Autor, @Id_Editorial, @Id_genero);
-SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id_Editorial, Id_genero FROM Libros WHERE (ISBN = @ISBN)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Editorial] ([Id_Editorial], [Nombre], [Telefono], [Correo]) VA" +
+                "LUES (@Id_Editorial, @Nombre, @Telefono, @Correo);\r\nSELECT Id_Editorial, Nombre," +
+                " Telefono, Correo FROM Editorial WHERE (Id_Editorial = @Id_Editorial)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ISBN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ISBN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Edicion", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Edicion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Paginas", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Paginas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Autor", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Autor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Editorial", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Editorial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_genero", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_genero", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Libros] SET [ISBN] = @ISBN, [Titulo] = @Titulo, [Edicion] = @Edicion, [Fecha_Creacion] = @Fecha_Creacion, [Paginas] = @Paginas, [Descripcion] = @Descripcion, [Id_Autor] = @Id_Autor, [Id_Editorial] = @Id_Editorial, [Id_genero] = @Id_genero WHERE (([ISBN] = @Original_ISBN) AND ([Titulo] = @Original_Titulo) AND ([Edicion] = @Original_Edicion) AND ([Fecha_Creacion] = @Original_Fecha_Creacion) AND ([Paginas] = @Original_Paginas) AND ([Descripcion] = @Original_Descripcion) AND ([Id_Autor] = @Original_Id_Autor) AND ([Id_Editorial] = @Original_Id_Editorial) AND ((@IsNull_Id_genero = 1 AND [Id_genero] IS NULL) OR ([Id_genero] = @Original_Id_genero)));
-SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id_Editorial, Id_genero FROM Libros WHERE (ISBN = @ISBN)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Editorial] SET [Id_Editorial] = @Id_Editorial, [Nombre] = @Nombre, [Telefono] = @Telefono, [Correo] = @Correo WHERE (([Id_Editorial] = @Original_Id_Editorial) AND ([Nombre] = @Original_Nombre) AND ([Telefono] = @Original_Telefono) AND ([Correo] = @Original_Correo));
+SELECT Id_Editorial, Nombre, Telefono, Correo FROM Editorial WHERE (Id_Editorial = @Id_Editorial)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ISBN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ISBN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Edicion", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Edicion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Paginas", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Paginas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Autor", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Autor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Editorial", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Editorial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_genero", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_genero", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ISBN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ISBN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titulo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Edicion", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Edicion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha_Creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Creacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Paginas", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Paginas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Autor", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Autor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Editorial", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Editorial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Id_genero", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_genero", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_genero", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_genero", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1019,8 +849,7 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id_" +
-                "Editorial, Id_genero FROM Libros";
+            this._commandCollection[0].CommandText = "SELECT Id_Editorial, Nombre, Telefono, Correo FROM dbo.Editorial";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1028,7 +857,7 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetLibros.LibrosDataTable dataTable) {
+        public virtual int Fill(BibliotechDataSet12.EditorialDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1041,9 +870,9 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetLibros.LibrosDataTable GetData() {
+        public virtual BibliotechDataSet12.EditorialDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetLibros.LibrosDataTable dataTable = new DataSetLibros.LibrosDataTable();
+            BibliotechDataSet12.EditorialDataTable dataTable = new BibliotechDataSet12.EditorialDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1051,15 +880,15 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetLibros.LibrosDataTable dataTable) {
+        public virtual int Update(BibliotechDataSet12.EditorialDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetLibros dataSet) {
-            return this.Adapter.Update(dataSet, "Libros");
+        public virtual int Update(BibliotechDataSet12 dataSet) {
+            return this.Adapter.Update(dataSet, "Editorial");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1081,37 +910,25 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ISBN, string Original_Titulo, byte Original_Edicion, System.DateTime Original_Fecha_Creacion, short Original_Paginas, string Original_Descripcion, short Original_Id_Autor, short Original_Id_Editorial, global::System.Nullable<short> Original_Id_genero) {
-            if ((Original_ISBN == null)) {
-                throw new global::System.ArgumentNullException("Original_ISBN");
+        public virtual int Delete(short Original_Id_Editorial, string Original_Nombre, string Original_Telefono, string Original_Correo) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((short)(Original_Id_Editorial));
+            if ((Original_Nombre == null)) {
+                throw new global::System.ArgumentNullException("Original_Nombre");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_ISBN));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nombre));
             }
-            if ((Original_Titulo == null)) {
-                throw new global::System.ArgumentNullException("Original_Titulo");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Titulo));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((byte)(Original_Edicion));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_Fecha_Creacion));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((short)(Original_Paginas));
-            if ((Original_Descripcion == null)) {
-                throw new global::System.ArgumentNullException("Original_Descripcion");
+            if ((Original_Telefono == null)) {
+                throw new global::System.ArgumentNullException("Original_Telefono");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Descripcion));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Telefono));
             }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((short)(Original_Id_Autor));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((short)(Original_Id_Editorial));
-            if ((Original_Id_genero.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((short)(Original_Id_genero.Value));
+            if ((Original_Correo == null)) {
+                throw new global::System.ArgumentNullException("Original_Correo");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Correo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1133,35 +950,25 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ISBN, string Titulo, byte Edicion, System.DateTime Fecha_Creacion, short Paginas, string Descripcion, short Id_Autor, short Id_Editorial, global::System.Nullable<short> Id_genero) {
-            if ((ISBN == null)) {
-                throw new global::System.ArgumentNullException("ISBN");
+        public virtual int Insert(short Id_Editorial, string Nombre, string Telefono, string Correo) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((short)(Id_Editorial));
+            if ((Nombre == null)) {
+                throw new global::System.ArgumentNullException("Nombre");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ISBN));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Nombre));
             }
-            if ((Titulo == null)) {
-                throw new global::System.ArgumentNullException("Titulo");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Titulo));
-            }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((byte)(Edicion));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Fecha_Creacion));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((short)(Paginas));
-            if ((Descripcion == null)) {
-                throw new global::System.ArgumentNullException("Descripcion");
+            if ((Telefono == null)) {
+                throw new global::System.ArgumentNullException("Telefono");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Descripcion));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Telefono));
             }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((short)(Id_Autor));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((short)(Id_Editorial));
-            if ((Id_genero.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((short)(Id_genero.Value));
+            if ((Correo == null)) {
+                throw new global::System.ArgumentNullException("Correo");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Correo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1183,84 +990,44 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string ISBN, 
-                    string Titulo, 
-                    byte Edicion, 
-                    System.DateTime Fecha_Creacion, 
-                    short Paginas, 
-                    string Descripcion, 
-                    short Id_Autor, 
-                    short Id_Editorial, 
-                    global::System.Nullable<short> Id_genero, 
-                    string Original_ISBN, 
-                    string Original_Titulo, 
-                    byte Original_Edicion, 
-                    System.DateTime Original_Fecha_Creacion, 
-                    short Original_Paginas, 
-                    string Original_Descripcion, 
-                    short Original_Id_Autor, 
-                    short Original_Id_Editorial, 
-                    global::System.Nullable<short> Original_Id_genero) {
-            if ((ISBN == null)) {
-                throw new global::System.ArgumentNullException("ISBN");
+        public virtual int Update(short Id_Editorial, string Nombre, string Telefono, string Correo, short Original_Id_Editorial, string Original_Nombre, string Original_Telefono, string Original_Correo) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((short)(Id_Editorial));
+            if ((Nombre == null)) {
+                throw new global::System.ArgumentNullException("Nombre");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ISBN));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Nombre));
             }
-            if ((Titulo == null)) {
-                throw new global::System.ArgumentNullException("Titulo");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Titulo));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((byte)(Edicion));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Fecha_Creacion));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((short)(Paginas));
-            if ((Descripcion == null)) {
-                throw new global::System.ArgumentNullException("Descripcion");
+            if ((Telefono == null)) {
+                throw new global::System.ArgumentNullException("Telefono");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Descripcion));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Telefono));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((short)(Id_Autor));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((short)(Id_Editorial));
-            if ((Id_genero.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((short)(Id_genero.Value));
+            if ((Correo == null)) {
+                throw new global::System.ArgumentNullException("Correo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Correo));
             }
-            if ((Original_ISBN == null)) {
-                throw new global::System.ArgumentNullException("Original_ISBN");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_ISBN));
-            }
-            if ((Original_Titulo == null)) {
-                throw new global::System.ArgumentNullException("Original_Titulo");
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((short)(Original_Id_Editorial));
+            if ((Original_Nombre == null)) {
+                throw new global::System.ArgumentNullException("Original_Nombre");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Titulo));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Nombre));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((byte)(Original_Edicion));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Fecha_Creacion));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((short)(Original_Paginas));
-            if ((Original_Descripcion == null)) {
-                throw new global::System.ArgumentNullException("Original_Descripcion");
+            if ((Original_Telefono == null)) {
+                throw new global::System.ArgumentNullException("Original_Telefono");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Descripcion));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Telefono));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((short)(Original_Id_Autor));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((short)(Original_Id_Editorial));
-            if ((Original_Id_genero.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((short)(Original_Id_genero.Value));
+            if ((Original_Correo == null)) {
+                throw new global::System.ArgumentNullException("Original_Correo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Correo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1282,25 +1049,8 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Titulo, 
-                    byte Edicion, 
-                    System.DateTime Fecha_Creacion, 
-                    short Paginas, 
-                    string Descripcion, 
-                    short Id_Autor, 
-                    short Id_Editorial, 
-                    global::System.Nullable<short> Id_genero, 
-                    string Original_ISBN, 
-                    string Original_Titulo, 
-                    byte Original_Edicion, 
-                    System.DateTime Original_Fecha_Creacion, 
-                    short Original_Paginas, 
-                    string Original_Descripcion, 
-                    short Original_Id_Autor, 
-                    short Original_Id_Editorial, 
-                    global::System.Nullable<short> Original_Id_genero) {
-            return this.Update(Original_ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id_Editorial, Id_genero, Original_ISBN, Original_Titulo, Original_Edicion, Original_Fecha_Creacion, Original_Paginas, Original_Descripcion, Original_Id_Autor, Original_Id_Editorial, Original_Id_genero);
+        public virtual int Update(string Nombre, string Telefono, string Correo, short Original_Id_Editorial, string Original_Nombre, string Original_Telefono, string Original_Correo) {
+            return this.Update(Original_Id_Editorial, Nombre, Telefono, Correo, Original_Id_Editorial, Original_Nombre, Original_Telefono, Original_Correo);
         }
     }
     
@@ -1316,7 +1066,7 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         
         private UpdateOrderOption _updateOrder;
         
-        private LibrosTableAdapter _librosTableAdapter;
+        private EditorialTableAdapter _editorialTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1338,12 +1088,12 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public LibrosTableAdapter LibrosTableAdapter {
+        public EditorialTableAdapter EditorialTableAdapter {
             get {
-                return this._librosTableAdapter;
+                return this._editorialTableAdapter;
             }
             set {
-                this._librosTableAdapter = value;
+                this._editorialTableAdapter = value;
             }
         }
         
@@ -1366,9 +1116,9 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._librosTableAdapter != null) 
-                            && (this._librosTableAdapter.Connection != null))) {
-                    return this._librosTableAdapter.Connection;
+                if (((this._editorialTableAdapter != null) 
+                            && (this._editorialTableAdapter.Connection != null))) {
+                    return this._editorialTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1383,7 +1133,7 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._librosTableAdapter != null)) {
+                if ((this._editorialTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1395,14 +1145,14 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(DataSetLibros dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(BibliotechDataSet12 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._librosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Libros.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._editorialTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Editorial.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._librosTableAdapter.Update(updatedRows));
+                    result = (result + this._editorialTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1414,13 +1164,13 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(DataSetLibros dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(BibliotechDataSet12 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._librosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Libros.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._editorialTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Editorial.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._librosTableAdapter.Update(addedRows));
+                    result = (result + this._editorialTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1432,13 +1182,13 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(DataSetLibros dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(BibliotechDataSet12 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._librosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Libros.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._editorialTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Editorial.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._librosTableAdapter.Update(deletedRows));
+                    result = (result + this._editorialTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1474,15 +1224,15 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(DataSetLibros dataSet) {
+        public virtual int UpdateAll(BibliotechDataSet12 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._librosTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._librosTableAdapter.Connection) == false))) {
+            if (((this._editorialTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._editorialTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -1518,13 +1268,13 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._librosTableAdapter != null)) {
-                    revertConnections.Add(this._librosTableAdapter, this._librosTableAdapter.Connection);
-                    this._librosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._librosTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._librosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._librosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._librosTableAdapter.Adapter);
+                if ((this._editorialTableAdapter != null)) {
+                    revertConnections.Add(this._editorialTableAdapter, this._editorialTableAdapter.Connection);
+                    this._editorialTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._editorialTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._editorialTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._editorialTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._editorialTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1585,9 +1335,9 @@ SELECT ISBN, Titulo, Edicion, Fecha_Creacion, Paginas, Descripcion, Id_Autor, Id
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._librosTableAdapter != null)) {
-                    this._librosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._librosTableAdapter]));
-                    this._librosTableAdapter.Transaction = null;
+                if ((this._editorialTableAdapter != null)) {
+                    this._editorialTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._editorialTableAdapter]));
+                    this._editorialTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -45,6 +45,13 @@ namespace Bibliotech
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxLibro = new System.Windows.Forms.ComboBox();
+            this.librosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetLibros = new Bibliotech.DataSetLibros();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.almacenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.almacen = new Bibliotech.Almacen();
             this.dateEntrega = new System.Windows.Forms.DateTimePicker();
             this.prestamosLibrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetPL = new Bibliotech.dataSetPL();
@@ -62,6 +69,11 @@ namespace Bibliotech
             this.tbCant = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.prestamos_LibrosTableAdapter = new Bibliotech.dataSetPLTableAdapters.Prestamos_LibrosTableAdapter();
+            this.almacenTableAdapter = new Bibliotech.AlmacenTableAdapters.AlmacenTableAdapter();
+            this.librosTableAdapter = new Bibliotech.DataSetLibrosTableAdapters.LibrosTableAdapter();
+            this.idr = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,11 +82,14 @@ namespace Bibliotech
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prestamos_LibrosTableAdapter = new Bibliotech.dataSetPLTableAdapters.Prestamos_LibrosTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.almacenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.almacen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosLibrosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -266,6 +281,11 @@ namespace Bibliotech
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.idr);
+            this.groupBox2.Controls.Add(this.comboBoxLibro);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.dateEntrega);
             this.groupBox2.Controls.Add(this.dateInicio);
             this.groupBox2.Controls.Add(this.label3);
@@ -290,9 +310,65 @@ namespace Bibliotech
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información del Prestamo";
             // 
+            // comboBoxLibro
+            // 
+            this.comboBoxLibro.DataSource = this.librosBindingSource;
+            this.comboBoxLibro.DisplayMember = "Titulo";
+            this.comboBoxLibro.FormattingEnabled = true;
+            this.comboBoxLibro.Location = new System.Drawing.Point(146, 55);
+            this.comboBoxLibro.Name = "comboBoxLibro";
+            this.comboBoxLibro.Size = new System.Drawing.Size(137, 23);
+            this.comboBoxLibro.TabIndex = 59;
+            this.comboBoxLibro.ValueMember = "ISBN";
+            this.comboBoxLibro.SelectedIndexChanged += new System.EventHandler(this.comboBoxLibro_SelectedIndexChanged);
+            this.comboBoxLibro.SelectedValueChanged += new System.EventHandler(this.comboBoxLibro_SelectedValueChanged);
+            // 
+            // librosBindingSource
+            // 
+            this.librosBindingSource.DataMember = "Libros";
+            this.librosBindingSource.DataSource = this.dataSetLibros;
+            // 
+            // dataSetLibros
+            // 
+            this.dataSetLibros.DataSetName = "DataSetLibros";
+            this.dataSetLibros.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(19, 114);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 14);
+            this.label7.TabIndex = 58;
+            this.label7.Text = "Almacen:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.almacenBindingSource;
+            this.comboBox1.DisplayMember = "Descripcion";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(146, 110);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(137, 23);
+            this.comboBox1.TabIndex = 57;
+            this.comboBox1.ValueMember = "Cve_Almacen";
+            // 
+            // almacenBindingSource
+            // 
+            this.almacenBindingSource.DataMember = "Almacen";
+            this.almacenBindingSource.DataSource = this.almacen;
+            // 
+            // almacen
+            // 
+            this.almacen.DataSetName = "Almacen";
+            this.almacen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dateEntrega
             // 
             this.dateEntrega.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.prestamosLibrosBindingSource, "Fecha_Entrega", true));
+            this.dateEntrega.Enabled = false;
             this.dateEntrega.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateEntrega.Location = new System.Drawing.Point(390, 85);
             this.dateEntrega.Name = "dateEntrega";
@@ -373,11 +449,13 @@ namespace Bibliotech
             // tbISBN
             // 
             this.tbISBN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prestamosLibrosBindingSource, "ISBN", true));
+            this.tbISBN.Enabled = false;
             this.tbISBN.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbISBN.Location = new System.Drawing.Point(146, 56);
+            this.tbISBN.Location = new System.Drawing.Point(95, 56);
             this.tbISBN.Name = "tbISBN";
-            this.tbISBN.Size = new System.Drawing.Size(137, 21);
+            this.tbISBN.Size = new System.Drawing.Size(44, 21);
             this.tbISBN.TabIndex = 50;
+            this.tbISBN.TextChanged += new System.EventHandler(this.tbISBN_TextChanged);
             // 
             // label4
             // 
@@ -461,10 +539,41 @@ namespace Bibliotech
             this.dataGridView1.Size = new System.Drawing.Size(541, 175);
             this.dataGridView1.TabIndex = 47;
             // 
+            // prestamos_LibrosTableAdapter
+            // 
+            this.prestamos_LibrosTableAdapter.ClearBeforeFill = true;
+            // 
+            // almacenTableAdapter
+            // 
+            this.almacenTableAdapter.ClearBeforeFill = true;
+            // 
+            // librosTableAdapter
+            // 
+            this.librosTableAdapter.ClearBeforeFill = true;
+            // 
+            // idr
+            // 
+            this.idr.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prestamosLibrosBindingSource, "Id", true));
+            this.idr.Location = new System.Drawing.Point(390, 152);
+            this.idr.Name = "idr";
+            this.idr.Size = new System.Drawing.Size(137, 23);
+            this.idr.TabIndex = 60;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(307, 156);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(79, 14);
+            this.label8.TabIndex = 61;
+            this.label8.Text = "Id Registro: ";
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id_Registro";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
@@ -509,10 +618,6 @@ namespace Bibliotech
             this.dataGridViewTextBoxColumn8.HeaderText = "Monto";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // prestamos_LibrosTableAdapter
-            // 
-            this.prestamos_LibrosTableAdapter.ClearBeforeFill = true;
-            // 
             // Solicitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,6 +627,7 @@ namespace Bibliotech
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Solicitud";
             this.Text = "Solicitud de Préstamo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Solicitud_FormClosing);
             this.Load += new System.EventHandler(this.Solicitud_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -530,6 +636,10 @@ namespace Bibliotech
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.almacenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.almacen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosLibrosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -565,6 +675,23 @@ namespace Bibliotech
         private dataSetPL dataSetPL;
         private System.Windows.Forms.BindingSource prestamosLibrosBindingSource;
         private dataSetPLTableAdapters.Prestamos_LibrosTableAdapter prestamos_LibrosTableAdapter;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label labelMonto;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private Almacen almacen;
+        private System.Windows.Forms.BindingSource almacenBindingSource;
+        private AlmacenTableAdapters.AlmacenTableAdapter almacenTableAdapter;
+        private System.Windows.Forms.ComboBox comboBoxLibro;
+        private DataSetLibros dataSetLibros;
+        private System.Windows.Forms.BindingSource librosBindingSource;
+        private DataSetLibrosTableAdapters.LibrosTableAdapter librosTableAdapter;
+        private System.Windows.Forms.TextBox idr;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -573,11 +700,5 @@ namespace Bibliotech
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label labelMonto;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -99,7 +99,8 @@ namespace Bibliotech
                     clienteBindingSource.EndEdit();
                     clienteTableAdapter.Update(this.bibliotechDataSet6.Cliente);
                     groupBox1.Enabled = false;
-                }
+                MessageBox.Show("¡Guardado con exito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -119,13 +120,21 @@ namespace Bibliotech
         }
         private void bDeleteuser_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Estas seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                clienteBindingSource.RemoveCurrent();
-                clienteTableAdapter.Update(this.bibliotechDataSet6.Cliente);
+                if (MessageBox.Show("Estas seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    clienteBindingSource.RemoveCurrent();
+                    clienteTableAdapter.Update(this.bibliotechDataSet6.Cliente);
+                }
+                //else
+                this.clienteTableAdapter.Fill(this.bibliotechDataSet6.Cliente);
             }
-            //else
-            this.clienteTableAdapter.Fill(this.bibliotechDataSet6.Cliente);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -138,11 +147,6 @@ namespace Bibliotech
             comboBox1.SelectedValue = tbMun.Text;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
         private void Clientes_FormClosing(object sender, FormClosingEventArgs e)
         {
             //Impedir que el formulario se cierre pulsando X o Alt + F4
@@ -150,6 +154,7 @@ namespace Bibliotech
             {
                 case CloseReason.UserClosing:
                     e.Cancel = true;
+                    this.Hide();
                     break;
             }
         }

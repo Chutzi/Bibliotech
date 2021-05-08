@@ -26,7 +26,7 @@ namespace Bibliotech
                 Validate(); 
                 moduloBindingSource.EndEdit();
                 moduloTableAdapter.Update(this.bibliotechDataSet.Modulo);
-                MessageBox.Show("Save", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Guardado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -123,7 +123,7 @@ namespace Bibliotech
             {
                 rol_OperacionBindingSource.EndEdit();
                 rolTableAdapter.Update(this.bibliotechDataSet2.Rol);
-                MessageBox.Show("Save", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Guardado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -167,7 +167,7 @@ namespace Bibliotech
             {
                 usuariosBindingSource1.EndEdit();
                 usuariosTableAdapter1.Update(this.bibliotechDataSet5.Usuarios);
-                MessageBox.Show("Save", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Guardado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -237,6 +237,7 @@ namespace Bibliotech
                     usuariosBindingSource1.EndEdit();
                     usuariosTableAdapter1.Update(this.bibliotechDataSet5.Usuarios);
                     groupBox1.Enabled = false;
+                    MessageBox.Show("¡Guardado con exito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
@@ -264,13 +265,21 @@ namespace Bibliotech
 
         private void bDeleteuser_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Estas seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                usuariosBindingSource1.RemoveCurrent();
-                usuariosTableAdapter1.Update(this.bibliotechDataSet5.Usuarios);
+                if (MessageBox.Show("Estas seguro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    usuariosBindingSource1.RemoveCurrent();
+                    usuariosTableAdapter1.Update(this.bibliotechDataSet5.Usuarios);
+                }
+                //else
+                this.usuariosTableAdapter1.Fill(this.bibliotechDataSet5.Usuarios);
             }
-            //else
-            this.usuariosTableAdapter1.Fill(this.bibliotechDataSet5.Usuarios);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
