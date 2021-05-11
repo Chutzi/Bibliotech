@@ -44,6 +44,7 @@ namespace Bibliotech
             tb_idAutor.Text = comboBox1.SelectedValue.ToString();
             tb_idEdit.Text = comboBox2.SelectedValue.ToString();
             textBox4.Text = comboBox3.SelectedValue.ToString();
+            
 
         }
 
@@ -130,9 +131,12 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
+                    this.editorialTableAdapter.Fill(this.dataSetEditorial.Editorial);
+
             }
-                
+
+
         }
 
         private void buttonNewAutor_Click(object sender, EventArgs e)
@@ -144,6 +148,7 @@ namespace Bibliotech
                 tbAP.Text = "";
                 tbAM.Text = "";
                 tbNacion.Text = "";
+                //cbPais.Text = 'mexicana';
                 bibliotechDataSet4.Autores.AddAutoresRow(tbNombreA.Text, tbAP.Text, tbAM.Text, tbNacion.Text);
                 autoresBindingSource.MoveLast();
             }
@@ -195,7 +200,8 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
+                    this.autoresTableAdapter.Fill(this.bibliotechDataSet4.Autores);
             }
             
         }
@@ -207,11 +213,13 @@ namespace Bibliotech
 
         private void bNewBook_Click(object sender, EventArgs e)
         {
+            Random random = new Random();
+            int numero = random.Next(1, 100000);
             count = 1;
             try
             {
                 groupBox1.Enabled = true;
-                tbISBN.Text = "1";
+                tbISBN.Text = numero.ToString();
                 tbTitulo.Text = "Inserte titulo";
                 tbEdicion.Text = "1";
                 date.Value = DateTime.Now.AddDays(1);
@@ -295,7 +303,9 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
+                    this.librosTableAdapter.Fill(this.dataSetLibros.Libros);
+                
             }
             
         
@@ -363,8 +373,9 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
+                if (MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
+                    this.almacen_LibrosTableAdapter.Fill(this.bibliotechDataSet10.Almacen_Libros);
 
-                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -439,8 +450,8 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
+                    this.generoTableAdapter.Fill(this.dSgen.Genero);
             }
             
         }

@@ -47,7 +47,7 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 clienteBindingSource.ResetBindings(false);
             }
         }
@@ -103,7 +103,7 @@ namespace Bibliotech
             }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     clienteBindingSource.ResetBindings(false);
                 }
             
@@ -132,7 +132,8 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
+                    this.clienteTableAdapter.Fill(this.bibliotechDataSet6.Cliente);
             }
             
         }

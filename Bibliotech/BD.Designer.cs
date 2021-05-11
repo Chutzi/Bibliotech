@@ -82,6 +82,7 @@ namespace Bibliotech
             this.label17 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbPais = new System.Windows.Forms.ComboBox();
             this.tbAM = new System.Windows.Forms.TextBox();
             this.tbNacion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -681,6 +682,7 @@ namespace Bibliotech
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbPais);
             this.groupBox2.Controls.Add(this.tbAM);
             this.groupBox2.Controls.Add(this.tbNacion);
             this.groupBox2.Controls.Add(this.label7);
@@ -699,6 +701,47 @@ namespace Bibliotech
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nuevo Autor";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // cbPais
+            // 
+            this.cbPais.Enabled = false;
+            this.cbPais.FormattingEnabled = true;
+            this.cbPais.Items.AddRange(new object[] {
+            "argentina\t",
+            "español",
+            "australiana\t",
+            "inglés",
+            "belga",
+            "francés",
+            "boliviana",
+            "brasileña",
+            "camboyana\t",
+            "canadiense",
+            "china\t",
+            "colombiana",
+            "coreana",
+            "costarricense",
+            "cubana\t",
+            "danesa",
+            "ecuatoriana",
+            "egipcia",
+            "salvadoreña",
+            "escocesa",
+            "española",
+            "estadounidense",
+            "estonia",
+            "etiope",
+            "filipina",
+            "finlandés",
+            "griega",
+            "guatemalteca",
+            "hondureña",
+            "mexicana"});
+            this.cbPais.Location = new System.Drawing.Point(147, 164);
+            this.cbPais.Name = "cbPais";
+            this.cbPais.Size = new System.Drawing.Size(136, 23);
+            this.cbPais.TabIndex = 22;
+            this.cbPais.Visible = false;
             // 
             // tbAM
             // 
@@ -1904,7 +1947,6 @@ namespace Bibliotech
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox tbAM;
-        private System.Windows.Forms.TextBox tbNacion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -2034,5 +2076,7 @@ namespace Bibliotech
         private BibliotechDataSet13 bibliotechDataSet13;
         private System.Windows.Forms.BindingSource generoBindingSource1;
         private BibliotechDataSet13TableAdapters.GeneroTableAdapter generoTableAdapter1;
+        private System.Windows.Forms.ComboBox cbPais;
+        private System.Windows.Forms.TextBox tbNacion;
     }
 }

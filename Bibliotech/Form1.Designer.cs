@@ -57,12 +57,13 @@ namespace Bibliotech
             // 
             // button3
             // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Blue;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(820, 3);
+            this.button3.Location = new System.Drawing.Point(832, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(30, 29);
+            this.button3.Size = new System.Drawing.Size(30, 38);
             this.button3.TabIndex = 0;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);

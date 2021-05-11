@@ -65,7 +65,7 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 prestamosLibrosBindingSource.ResetBindings(false);
             }
         }
@@ -117,7 +117,7 @@ namespace Bibliotech
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         prestamosLibrosBindingSource.ResetBindings(false);
                     }
 
@@ -134,7 +134,7 @@ namespace Bibliotech
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         prestamosLibrosBindingSource.ResetBindings(false);
                     }
                 }
@@ -173,7 +173,8 @@ namespace Bibliotech
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
+                    this.prestamos_LibrosTableAdapter.FillByIDPresta(this.dataSetPL.Prestamos_Libros, IdPresta);
             }
             
         }
